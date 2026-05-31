@@ -8,6 +8,7 @@ import OrderList from 'src/components/table/tableRows/order-list';
 import ProfileCover from 'src/components/_main/profile/profile-cover';
 import { _users } from 'src/_mock/users';
 import { NoDataFound } from '@/components/noDataFound';
+import PropTypes from 'prop-types';
 
 const TABLE_HEAD = [
   { id: 'id', label: 'ID', alignRight: false, sort: true },
@@ -90,3 +91,7 @@ export default function UserProfile({ id }) {
     </>
   );
 }
+
+UserProfile.propTypes = {
+  id: PropTypes.node.isRequired,
+};

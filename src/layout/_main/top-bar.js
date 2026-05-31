@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import { Stack, Skeleton, Typography, Container } from '@mui/material';
@@ -97,3 +98,7 @@ export default function TopBar({ currencies }) {
     </Box>
   );
 }
+
+TopBar.propTypes = {
+  currencies: PropTypes.array.isRequired,
+};

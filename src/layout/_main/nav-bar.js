@@ -22,7 +22,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Logo from '@/components/logo';
 import { CgMenuRight } from 'react-icons/cg';
-import { IoHomeOutline, IoSunnyOutline, IoMoonOutline } from 'react-icons/io5';
+import { IoHomeOutline } from 'react-icons/io5';
 import { HiOutlineBuildingOffice } from 'react-icons/hi2';
 import { TfiHeadphoneAlt } from 'react-icons/tfi';
 import { MdOutlineArticle } from 'react-icons/md';

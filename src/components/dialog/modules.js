@@ -21,6 +21,7 @@ export default function ModulesDialog(props) {
   return (
     <>
       <DialogTitle
+        component="div"
         sx={{
           display: 'flex',
           flexDirection: 'column',

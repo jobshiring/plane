@@ -1,6 +1,6 @@
 import React from 'react';
-
 import ResetPasswordForm from 'src/components/forms/reset-password';
+import PropTypes from 'prop-types';
 
 const ResetPasswordMain = (props) => {
   const { token } = props;
@@ -8,3 +8,7 @@ const ResetPasswordMain = (props) => {
 };
 
 export default ResetPasswordMain;
+
+ResetPasswordMain.propTypes = {
+  token: PropTypes.string.isRequired,
+};

@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import AdminReviewFrom from '@/components/forms/admin-reviews';
 import { _reviews as reviewData } from 'src/_mock/reviews';
+import PropTypes from 'prop-types';
+
 
 const STORAGE_KEY = 'reviews_data';
 
@@ -37,3 +39,7 @@ export default function EditReview({ id }) {
 
   return <AdminReviewFrom data={review} isLoading={false} />;
 }
+
+EditReview.propTypes = {
+  id: PropTypes.node.isRequired,
+};

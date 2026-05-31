@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic';
 import { useSelector, currency } from '@/redux';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { useRouter } from '@bprogress/next';
+import PropTypes from 'prop-types';
 
 // Importing UI components from MUI
 import {
@@ -284,3 +285,8 @@ export default function FlightList({ ...props }) {
     </Container>
   );
 }
+
+FlightList.propTypes = {
+  slug: PropTypes.array.isRequired,
+  payload: PropTypes.object.isRequired,
+};

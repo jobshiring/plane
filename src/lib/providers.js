@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import PropTypes from 'prop-types';
 
 /* Redux */
 import { Provider } from 'react-redux';
@@ -37,4 +38,8 @@ export const Providers = ({ children }) => {
       </PersistGate>
     </Provider>
   );
+};
+
+Providers.propTypes = {
+  children: PropTypes.node.isRequired,
 };

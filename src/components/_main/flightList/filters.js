@@ -2,7 +2,7 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 import { Card, CardContent, Divider } from '@mui/material';
 import _ from 'lodash';
-
+import PropTypes from 'prop-types';
 import StopsSkeleton from '@/components/skeletons/flights/filters/stops';
 import PriceRangeSkeleton from '@/components/skeletons/flights/filters/price-range';
 import AirlinesSkeleton from '@/components/skeletons/flights/filters/airlines';
@@ -76,3 +76,10 @@ export default function Filters(props) {
     </Card>
   );
 }
+
+Filters.propTypes = {
+  data: PropTypes.array,
+  isLoading: PropTypes.bool.isRequired,
+  completeLoading: PropTypes.bool.isRequired,
+  isDrawer: PropTypes.bool,
+};
