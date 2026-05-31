@@ -37,16 +37,13 @@ import { MdOutlineAirplaneTicket } from 'react-icons/md';
 import { LuBaggageClaim } from 'react-icons/lu';
 import { IoInformationCircle } from 'react-icons/io5';
 
-// Importing Redux hooks for state management
-import { useDispatch } from '@/redux';
-import { flightSlice } from '@/redux/slices/flight/flight';
+// Price comparison components
+import PriceComparisonGrid from './price-comparison-grid';
+import { generateComparisonPrices } from '@/_mock/price-providers';
 // Importing TimelineOppositeContent for timeline layout
 import TimelineOppositeContent, {
   timelineOppositeContentClasses,
 } from '@mui/lab/TimelineOppositeContent';
-// Importing Next.js navigation hooks
-import { useRouter } from '@bprogress/next';
-import { usePathname } from 'next/navigation';
 import { parse, format } from 'date-fns';
 
 function convertToAmPm(time24) {
@@ -98,12 +95,23 @@ function generateTravelers(payload) {
 
 export default function FlightCard({ ...props }) {
   const { flight, isLoading, isRound, slug, payload } = props;
-  const pathname = usePathname();
   const [open, setOpen] = React.useState(false);
-  const dispatch = useDispatch();
-  const router = useRouter();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
+  // Generate comparison prices for this flight
+  const comparisonPrices = React.useMemo(() => {
+    if (isLoading || !flight?.[0]?.[0]) return [];
+    const basePrice = flight[0][0].price;
+    const currency = flight[0][0].currency;
+    return generateComparisonPrices(basePrice, currency, flight[0][0]);
+  }, [flight, isLoading]);
+
+  // Get the best (lowest) price
+  const bestPrice = React.useMemo(() => {
+    if (!comparisonPrices.length) return null;
+    return Math.min(...comparisonPrices.map((p) => p.price));
+  }, [comparisonPrices]);
 
   return (
     <Card
@@ -449,7 +457,15 @@ export default function FlightCard({ ...props }) {
                 >
                   From
                 </Typography>
-                {flight[0][0]?.currency} {flight[0][0]?.price}
+                {flight[0][0]?.currency}{' '}
+                {bestPrice?.toLocaleString() || flight[0][0]?.price}
+                <Chip
+                  label="Compare below"
+                  size="small"
+                  color="primary"
+                  variant="outlined"
+                  sx={{ ml: 1, height: 24, fontSize: '0.7rem' }}
+                />
               </>
             )}
           </Typography>
@@ -466,28 +482,18 @@ export default function FlightCard({ ...props }) {
               more details
             </Button>
           )}
-          {isLoading ? (
-            <Skeleton variant="rounded" height={40} width={104} />
-          ) : (
-            <Button
-              variant="contained"
-              color="primary"
-              endIcon={<MdOutlineAirplaneTicket />}
-              onClick={() => {
-                dispatch(
-                  flightSlice.actions.addBooking({
-                    ...flight[0][0],
-                    travelers: generateTravelers(payload),
-                    backUrl: pathname,
-                  })
-                );
-                router.push('/flights/booking');
-              }}
-            >
-              Book flight
-            </Button>
-          )}
         </Stack>
+
+        {/* Price Comparison Grid */}
+        <PriceComparisonGrid
+          prices={comparisonPrices}
+          isLoading={isLoading}
+          airlineLogo={
+            flight?.[0]?.[0]?.img
+              ? `https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/${flight[0][0].img}.svg`
+              : null
+          }
+        />
         <Collapse in={open}>
           <>
             {flight?.map((parentSegment, parentIndex) => (

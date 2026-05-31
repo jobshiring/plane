@@ -54,6 +54,7 @@
     "redux-persist": "^6.0.0",
     "simplebar-react": "^3.3.2",
     "slick-carousel": "^1.8.1",
+    "src": "^1.1.2",
     "stylis-plugin-rtl": "^2.1.1",
     "yup": "^1.7.1"
   },

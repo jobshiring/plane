@@ -45,16 +45,16 @@ export default function Hero({ data }) {
                   color="text.primary"
                   lineHeight={1}
                 >
-                  Book Your Next Adventure
+                  Compare & Save on Flights
                 </Typography>
                 <Typography
                   variant="subtitle1"
                   fontWeight={400}
                   color="text.secondary"
                 >
-                  Explore the world with amazing flight deals. Find the best
-                  flights, compare prices, and book your trip with ease on
-                  ReactFlights.
+                  Find the best flight deals from Skyscanner, Kayak, Google
+                  Flights, Expedia, and more. Compare prices side-by-side and
+                  book directly with your preferred provider.
                 </Typography>
                 <Stack
                   direction="row"
