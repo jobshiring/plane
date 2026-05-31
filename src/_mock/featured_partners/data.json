@@ -1,0 +1,195 @@
+{
+  "data": [
+    {
+      "_id": "67cf1f4df3470d5aa0c902c7",
+      "name": "Fly Dubai",
+      "iata": "FZ",
+      "icao": "FDB",
+      "country": "United Arab Emirates",
+      "type": "International Airline",
+      "website": "https://www.flydubai.com",
+      "tagline": "Get Going with FlyDubai",
+      "status": "active",
+      "priority": 1,
+      "regions": ["Middle East", "Asia", "Europe"],
+      "cover": {
+        "_id": "FlyDubai-Logo_plfhfz",
+        "url": "https://res.cloudinary.com/dcuwtg4h1/image/upload/v1741627187/FlyDubai-Logo_plfhfz.png"
+      },
+      "createdAt": "2025-01-12T10:24:31.115Z",
+      "updatedAt": "2025-01-12T10:24:31.115Z"
+    },
+    {
+      "_id": "67cf1e73aabdf1dc95707245",
+      "name": "Pegasus Airlines",
+      "iata": "PC",
+      "icao": "PGT",
+      "country": "Turkey",
+      "type": "Low-cost Carrier",
+      "website": "https://www.flypgs.com",
+      "tagline": "Your Digital Airline",
+      "status": "active",
+      "priority": 2,
+      "regions": ["Europe", "Middle East"],
+      "cover": {
+        "_id": "PC_fsmpxe",
+        "url": "https://res.cloudinary.com/dcuwtg4h1/image/upload/v1741626874/PC_fsmpxe.png"
+      },
+      "createdAt": "2025-01-18T14:12:55.238Z",
+      "updatedAt": "2025-01-18T14:12:55.238Z"
+    },
+    {
+      "_id": "67cf1dd1aabdf1dc95707223",
+      "name": "Serene Airline",
+      "iata": "ER",
+      "icao": "SEP",
+      "country": "Pakistan",
+      "type": "Domestic Airline",
+      "website": "https://www.sereneair.com",
+      "tagline": "A Serene Experience",
+      "status": "active",
+      "priority": 3,
+      "regions": ["Pakistan", "Middle East"],
+      "cover": {
+        "_id": "ER_dpjrqy",
+        "url": "https://res.cloudinary.com/dcuwtg4h1/image/upload/v1741626753/ER_dpjrqy.png"
+      },
+      "createdAt": "2025-01-25T09:40:13.210Z",
+      "updatedAt": "2025-01-25T09:40:13.210Z"
+    },
+    {
+      "_id": "67cf1d3d733bec3cc98546ad",
+      "name": "Etihad Airways",
+      "iata": "EY",
+      "icao": "ETD",
+      "country": "United Arab Emirates",
+      "type": "Premium Airline",
+      "website": "https://www.etihad.com",
+      "tagline": "Choose Well",
+      "status": "active",
+      "priority": 4,
+      "regions": ["Middle East", "Europe", "Asia", "US"],
+      "cover": {
+        "_id": "EY_hb5grd",
+        "url": "https://res.cloudinary.com/dcuwtg4h1/image/upload/v1741626669/EY_hb5grd.png"
+      },
+      "createdAt": "2025-02-01T11:18:25.301Z",
+      "updatedAt": "2025-02-01T11:18:25.301Z"
+    },
+    {
+      "_id": "67cf1d19733bec3cc985469b",
+      "name": "Fly Emirates",
+      "iata": "EK",
+      "icao": "UAE",
+      "country": "United Arab Emirates",
+      "type": "Premium Airline",
+      "website": "https://www.emirates.com",
+      "tagline": "Fly Better",
+      "status": "active",
+      "priority": 5,
+      "regions": ["Worldwide"],
+      "cover": {
+        "_id": "EK_tvdimr",
+        "url": "https://res.cloudinary.com/dcuwtg4h1/image/upload/v1741626643/EK_tvdimr.png"
+      },
+      "createdAt": "2025-02-05T13:50:49.980Z",
+      "updatedAt": "2025-02-05T13:50:49.980Z"
+    },
+    {
+      "_id": "67ce9ae21902d820d0cbd211",
+      "name": "Turkish Airline",
+      "iata": "TK",
+      "icao": "THY",
+      "country": "Turkey",
+      "type": "International Airline",
+      "website": "https://www.turkishairlines.com",
+      "tagline": "Widen Your World",
+      "status": "active",
+      "priority": 6,
+      "regions": ["Europe", "Asia", "Middle East", "Africa"],
+      "cover": {
+        "_id": "TK_rg7gqc",
+        "url": "https://res.cloudinary.com/dcuwtg4h1/image/upload/v1741626477/TK_rg7gqc.png"
+      },
+      "createdAt": "2025-02-11T15:22:14.020Z",
+      "updatedAt": "2025-02-11T15:22:14.020Z"
+    },
+    {
+      "_id": "67ce9ad71902d820d0cbd207",
+      "name": "Qatar Airways",
+      "iata": "QR",
+      "icao": "QTR",
+      "country": "Qatar",
+      "type": "Premium Airline",
+      "website": "https://www.qatarairways.com",
+      "tagline": "Going Places Together",
+      "status": "active",
+      "priority": 7,
+      "regions": ["Worldwide"],
+      "cover": {
+        "_id": "Qatar-airways-animal-logo_aodzwg",
+        "url": "https://res.cloudinary.com/dcuwtg4h1/image/upload/v1741593296/Qatar-airways-animal-logo_aodzwg.png"
+      },
+      "createdAt": "2025-02-20T16:10:03.249Z",
+      "updatedAt": "2025-02-20T16:10:03.249Z"
+    },
+    {
+      "_id": "67ce9acc1902d820d0cbd1fd",
+      "name": "Air India",
+      "iata": "AI",
+      "icao": "AIC",
+      "country": "India",
+      "type": "International Airline",
+      "website": "https://www.airindia.com",
+      "tagline": "Truly Indian",
+      "status": "active",
+      "priority": 8,
+      "regions": ["Asia", "Middle East", "Europe"],
+      "cover": {
+        "_id": "AI_AirIndia_India_Dec2022_v3_mloiky",
+        "url": "https://res.cloudinary.com/dcuwtg4h1/image/upload/v1741626579/AI_AirIndia_India_Dec2022_v3_mloiky.webp"
+      },
+      "createdAt": "2025-02-27T08:54:52.495Z",
+      "updatedAt": "2025-02-27T08:54:52.495Z"
+    },
+    {
+      "_id": "67ce9abe1902d820d0cbd1f3",
+      "name": "PIA",
+      "iata": "PK",
+      "icao": "PIA",
+      "country": "Pakistan",
+      "type": "Domestic & International Airline",
+      "website": "https://www.piac.com.pk",
+      "tagline": "Great People to Fly With",
+      "status": "active",
+      "priority": 9,
+      "regions": ["Pakistan", "Middle East", "Europe"],
+      "cover": {
+        "_id": "PK_a72lxv",
+        "url": "https://res.cloudinary.com/dcuwtg4h1/image/upload/v1741626506/PK_a72lxv.png"
+      },
+      "createdAt": "2025-03-03T10:18:38.521Z",
+      "updatedAt": "2025-03-03T10:18:38.521Z"
+    },
+    {
+      "_id": "67ce9aa34a010713b5d39fa7",
+      "name": "Air Arabia",
+      "iata": "G9",
+      "icao": "ABY",
+      "country": "United Arab Emirates",
+      "type": "Low-cost Carrier",
+      "website": "https://www.airarabia.com",
+      "tagline": "Pay Less, Fly More",
+      "status": "active",
+      "priority": 10,
+      "regions": ["Middle East", "Asia", "Europe"],
+      "cover": {
+        "_id": "Air-Arabia-logo_cpkh7l",
+        "url": "https://res.cloudinary.com/dcuwtg4h1/image/upload/v1741627370/Air-Arabia-logo_cpkh7l.png"
+      },
+      "createdAt": "2025-03-08T17:23:01.640Z",
+      "updatedAt": "2025-03-08T17:23:01.640Z"
+    }
+  ],
+  "count": 2
+}

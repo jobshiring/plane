@@ -1,0 +1,81 @@
+{
+    "data": [
+        {
+            "_id": "67ff431d6e4b2667f90c97cc",
+            "firstName": "raman",
+            "lastName": "kaur",
+            "email": "raman@gmail.com",
+            "gender": "female",
+            "phone": "8054839075",
+            "isVerified": false,
+            "otp": "453266",
+            "role": "user",
+            "createdAt": "2025-04-16T05:41:49.456Z",
+            "updatedAt": "2025-04-16T05:41:49.456Z",
+            "__v": 0
+        },
+        {
+            "_id": "673a9b4c0bea56cf9737158a",
+            "firstName": "Kamran",
+            "lastName": "Haider",
+            "email": "admin@reactflights.com",
+            "gender": "male",
+            "phone": "1231231",
+            "isVerified": false,
+            "otp": "677698",
+            "role": "admin",
+            "createdAt": "2024-11-18T01:41:32.049Z",
+            "updatedAt": "2024-11-18T01:41:32.049Z",
+            "__v": 0
+        },
+        {
+            "cover": {
+                "_id": "IMG_2166_1_da0768",
+                "url": "https://res.cloudinary.com/dcuwtg4h1/image/upload/v1731750051/IMG_2166_1_da0768.jpg"
+            },
+            "_id": "673868423e41d1104ac04359",
+            "firstName": "Mohsin",
+            "lastName": "Dawood",
+            "email": "mohsindawood58@gmail.com",
+            "gender": "male",
+            "phone": "03043454433",
+            "isVerified": false,
+            "otp": "989877",
+            "role": "admin",
+            "createdAt": "2024-11-16T09:39:14.025Z",
+            "updatedAt": "2024-11-16T09:41:57.410Z",
+            "__v": 0,
+            "about": "",
+            "address": "",
+            "city": "",
+            "country": "Andorra",
+            "state": "",
+            "zip": ""
+        },
+        {
+            "cover": {
+                "_id": "IMG_1598_hznizw",
+                "url": "https://res.cloudinary.com/dcuwtg4h1/image/upload/v1731744092/IMG_1598_hznizw.jpg"
+            },
+            "_id": "673835fbd9d3eac6259d0e54",
+            "firstName": "Khushboo",
+            "lastName": "saini",
+            "email": "user@reactflights.com",
+            "gender": "male",
+            "phone": "06283756273",
+            "isVerified": true,
+            "otp": "209647",
+            "role": "user",
+            "createdAt": "2024-11-16T06:04:43.280Z",
+            "updatedAt": "2025-04-19T07:09:15.907Z",
+            "__v": 0,
+            "about": "ycvbnm,",
+            "address": "ambuja cemen",
+            "city": "Bathinda",
+            "country": "India",
+            "state": "Punjab",
+            "zip": "151001"
+        }
+    ],
+    "count": 1
+}

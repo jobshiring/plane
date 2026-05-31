@@ -1,0 +1,95 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "type": "Domestic",
+      "airport": "John F. Kennedy International Airport (JFK) - New York",
+      "order": 1,
+      "status": "Active",
+      "date": "2024-01-15",
+      "createdAt": "2024-01-15T10:30:00Z"
+    },
+    {
+      "id": 2,
+      "type": "International",
+      "airport": "Heathrow Airport (LHR) - London",
+      "order": 2,
+      "status": "Active",
+      "date": "2024-01-14",
+      "createdAt": "2024-01-14T14:20:00Z"
+    },
+    {
+      "id": 3,
+      "type": "Domestic",
+      "airport": "Los Angeles International Airport (LAX) - Los Angeles",
+      "order": 3,
+      "status": "Active",
+      "date": "2024-01-13",
+      "createdAt": "2024-01-13T09:15:00Z"
+    },
+    {
+      "id": 4,
+      "type": "International",
+      "airport": "Dubai International Airport (DXB) - Dubai",
+      "order": 4,
+      "status": "Active",
+      "date": "2024-01-12",
+      "createdAt": "2024-01-12T16:45:00Z"
+    },
+    {
+      "id": 5,
+      "type": "Domestic",
+      "airport": "O'Hare International Airport (ORD) - Chicago",
+      "order": 5,
+      "status": "Inactive",
+      "date": "2024-01-11",
+      "createdAt": "2024-01-11T11:30:00Z"
+    },
+    {
+      "id": 6,
+      "type": "International",
+      "airport": "Singapore Changi Airport (SIN) - Singapore",
+      "order": 6,
+      "status": "Active",
+      "date": "2024-01-10",
+      "createdAt": "2024-01-10T08:20:00Z"
+    },
+    {
+      "id": 7,
+      "type": "Domestic",
+      "airport": "Hartsfield-Jackson Atlanta International Airport (ATL) - Atlanta",
+      "order": 7,
+      "status": "Active",
+      "date": "2024-01-09",
+      "createdAt": "2024-01-09T13:10:00Z"
+    },
+    {
+      "id": 8,
+      "type": "International",
+      "airport": "Amsterdam Airport Schiphol (AMS) - Amsterdam",
+      "order": 8,
+      "status": "Active",
+      "date": "2024-01-08",
+      "createdAt": "2024-01-08T15:55:00Z"
+    },
+    {
+      "id": 9,
+      "type": "Domestic",
+      "airport": "Denver International Airport (DEN) - Denver",
+      "order": 9,
+      "status": "Active",
+      "date": "2024-01-07",
+      "createdAt": "2024-01-07T12:40:00Z"
+    },
+    {
+      "id": 10,
+      "type": "International",
+      "airport": "Tokyo Haneda Airport (HND) - Tokyo",
+      "order": 10,
+      "status": "Active",
+      "date": "2024-01-06",
+      "createdAt": "2024-01-06T07:25:00Z"
+    }
+  ],
+  "count": 10
+}

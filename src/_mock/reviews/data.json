@@ -1,0 +1,159 @@
+{
+  "data": [
+    {
+      "cover": {
+        "_id": "avatar_2_oyzfe7",
+        "url": "https://res.cloudinary.com/dcuwtg4h1/image/upload/v1741625661/avatar_2_oyzfe7.jpg"
+      },
+      "_id": "67cf1940733bec3cc98545c2",
+      "name": "Sophia Laurent",
+      "rating": 5,
+      "title": "No Hidden Fees, Just Great Prices!",
+      "comment": "I love how easy it is to find flights on ReactFlights! The prices are transparent, and the process is quick. Definitely using it again!",
+      "createdAt": "2025-03-10T16:54:24.260Z",
+      "updatedAt": "2025-03-10T16:54:24.260Z",
+      "__v": 0
+    },
+    {
+      "cover": {
+        "_id": "avatar_18_lb3gyj",
+        "url": "https://res.cloudinary.com/dcuwtg4h1/image/upload/v1741625611/avatar_18_lb3gyj.jpg"
+      },
+      "_id": "67cf190e733bec3cc98545b0",
+      "name": "Carlos Gonzalez",
+      "rating": 4.5,
+      "title": "Best Deals on Flights!",
+      "comment": "Incredible deals and fast booking. I saved money on my last trip thanks to ReactFlights.",
+      "createdAt": "2025-03-10T16:53:34.622Z",
+      "updatedAt": "2025-03-10T16:53:34.622Z",
+      "__v": 0
+    },
+    {
+      "cover": {
+        "_id": "avatar_11_solg5t",
+        "url": "https://res.cloudinary.com/dcuwtg4h1/image/upload/v1741625521/avatar_11_solg5t.jpg"
+      },
+      "_id": "67cf18cdaabdf1dc957071bb",
+      "name": "Hiroshi Tanaka",
+      "rating": 5,
+      "title": "Smooth & Hassle-Free Experience!",
+      "comment": "ReactFlights offers great options and flexibility. It’s my go-to website for all flight bookings.",
+      "createdAt": "2025-03-10T16:52:29.599Z",
+      "updatedAt": "2025-03-10T16:52:29.599Z",
+      "__v": 0
+    },
+    {
+      "cover": {
+        "_id": "avatar_18_frbxon",
+        "url": "https://res.cloudinary.com/dcuwtg4h1/image/upload/v1741624982/avatar_18_frbxon.jpg"
+      },
+      "_id": "67386708d39a7a1befa6233e",
+      "name": "Emily R.",
+      "rating": 5,
+      "title": "Seamless Booking & Great Deals!",
+      "comment": "ReactFlights made my booking process effortless. The interface is clean and very intuitive.",
+      "createdAt": "2024-11-16T09:34:00.468Z",
+      "updatedAt": "2025-03-10T16:47:36.203Z",
+      "__v": 0
+    },
+    {
+      "cover": {
+        "_id": "avatar_14_fr5quj",
+        "url": "https://res.cloudinary.com/dcuwtg4h1/image/upload/v1741625474/avatar_14_fr5quj.jpg"
+      },
+      "_id": "6738514b0b251e48a19df46f",
+      "name": "Aisha Mohammed",
+      "rating": 5,
+      "title": "Fast, Reliable & Affordable!",
+      "comment": "I always use ReactFlights for my international trips. Customer support is excellent.",
+      "createdAt": "2024-11-16T08:01:15.818Z",
+      "updatedAt": "2025-03-10T16:51:17.682Z",
+      "__v": 0
+    },
+    {
+      "cover": {
+        "_id": "avatar_6_lk92js",
+        "url": "/images/avatars/avatar-12.png"
+      },
+      "_id": "67cf1a8f733bec3cc98545d9",
+      "name": "Daniel Peterson",
+      "rating": 4,
+      "title": "Very User-Friendly Platform",
+      "comment": "Booking flights is straightforward and quick. Filters help a lot when comparing options.",
+      "createdAt": "2025-03-11T10:14:11.402Z",
+      "updatedAt": "2025-03-11T10:14:11.402Z",
+      "__v": 0
+    },
+    {
+      "cover": {
+        "_id": "avatar_9_hj3lqw",
+        "url": "/images/avatars/avatar-10.png"
+      },
+      "_id": "67cf1b21733bec3cc98545e1",
+      "name": "Fatima Noor",
+      "rating": 5,
+      "title": "Perfect for Family Travel",
+      "comment": "I booked tickets for my entire family without any issues. The pricing was fair and clear.",
+      "createdAt": "2025-03-11T10:18:57.611Z",
+      "updatedAt": "2025-03-11T10:18:57.611Z",
+      "__v": 0
+    },
+    {
+      "cover": {
+        "_id": "avatar_4_pq92kd",
+        "url": "/images/avatars/avatar-13.png"
+      },
+      "_id": "67cf1b9c733bec3cc98545ea",
+      "name": "James Wilson",
+      "rating": 4.5,
+      "title": "Reliable Flight Search",
+      "comment": "I appreciate how accurate the search results are. No last-minute surprises.",
+      "createdAt": "2025-03-11T10:22:20.900Z",
+      "updatedAt": "2025-03-11T10:22:20.900Z",
+      "__v": 0
+    },
+    {
+      "cover": {
+        "_id": "avatar_12_xs91ab",
+        "url": "/images/avatars/avatar-11.png"
+      },
+      "_id": "67cf1c1f733bec3cc98545f3",
+      "name": "Liam O’Connor",
+      "rating": 5,
+      "title": "Excellent Experience Overall",
+      "comment": "From searching to payment, everything was smooth. Highly recommended for frequent travelers.",
+      "createdAt": "2025-03-11T10:26:39.781Z",
+      "updatedAt": "2025-03-11T10:26:39.781Z",
+      "__v": 0
+    },
+    {
+      "cover": {
+        "_id": "avatar_15_zp8dke",
+        "url": "/images/avatars/avatar-9.jpg"
+      },
+      "_id": "67cf1c9a733bec3cc98545fc",
+      "name": "Sara Khan",
+      "rating": 4,
+      "title": "Good Prices & Clean UI",
+      "comment": "The interface is modern and clean. I found good deals for domestic flights.",
+      "createdAt": "2025-03-11T10:30:02.194Z",
+      "updatedAt": "2025-03-11T10:30:02.194Z",
+      "__v": 0
+    },
+    {
+      "cover": {
+        "_id": "avatar_7_km2sod",
+        "url": "/images/avatars/avatar-14.png"
+      },
+      "_id": "67cf1d14733bec3cc9854605",
+      "name": "Michael Brown",
+      "rating": 5,
+      "title": "Saved Time and Money",
+      "comment": "ReactFlights helped me compare flights quickly and book at the best rate.",
+      "createdAt": "2025-03-11T10:33:56.021Z",
+      "updatedAt": "2025-03-11T10:33:56.021Z",
+      "__v": 0
+    }
+  ],
+  "count": 12
+}

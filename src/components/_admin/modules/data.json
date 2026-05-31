@@ -1,0 +1,31 @@
+{
+    "data": [
+        {
+            "_id": "create",
+            "name": "amadeus",
+            "image": "https://res.cloudinary.com/dcuwtg4h1/image/upload/v1725169220/amadeus-2_flbwgp.svg",
+            "color": "#ff0066",
+            "status": "active",
+            "credentials1": "4Blrg68Xi2bn2OIVIXGANqKwenN7P4ej",
+            "devMode": "development",
+            "pnrType": "auto",
+            "createdAt": "2024-09-01T06:08:29.312Z",
+            "updatedAt": "2024-09-01T06:08:29.312Z",
+            "__v": 0
+        },
+        {
+            "_id": "create1",
+            "name": "duffel",
+            "image": "https://res.cloudinary.com/dcuwtg4h1/image/upload/v1725168932/duffel_12766_logo_1640582995_sb5lt_bvyhxo.avif",
+            "color": "#00eeff",
+            "status": "active",
+            "credentials1": "duffel_test_czcPvn54moDbdvjoVP3Mj4wra9hGL_ajwrR9FUAQbrO",
+            "devMode": "development",
+            "pnrType": "auto",
+            "createdAt": "2024-09-01T06:08:29.312Z",
+            "updatedAt": "2024-09-01T06:08:29.312Z",
+            "__v": 0
+        }
+    ],
+    "count": 1
+}

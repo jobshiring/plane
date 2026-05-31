@@ -1,0 +1,396 @@
+{
+    "success": true,
+    "data": {
+        "salesReport": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            17,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "bestSellingProducts": [
+            {
+                "_id": "6695fcb7476b819af72966d9",
+                "name": "LV Trainer Sneaker",
+                "code": "7665345345",
+                "status": "sale",
+                "isFeatured": true,
+                "brand": "6694a97d60f46d565b19153b",
+                "likes": 0,
+                "description": "This edition of the LV Trainer sneaker teams smooth calf leather with grained calf leather embossed with Louis Vuitton's signature Monogram pattern. This cult model was designed by Virgil Abloh, who drew inspiration from vintage basketball sneakers. It is revisited in pastel colors highlighting the elaborate construction of its upper, which takes seven hours to stitch.",
+                "metaTitle": "LV Trainer Sneaker",
+                "metaDescription": "This edition of the LV Trainer sneaker teams smooth calf leather with grained calf leather embossed with Louis Vuitton's signature Monogram pattern. This cult model was designed by Virgil Abloh, who drew inspiration from vintage basketball sneakers. It is revisited in pastel colors highlighting the elaborate construction of its upper, which takes seven hours to stitch.",
+                "slug": "lv-trainer-sneaker",
+                "category": "6694dabf9a7aeb5a55904353",
+                "subCategory": "6694e3eac21e17799cd4e6a0",
+                "gender": "",
+                "tags": [
+                    "LV Trainer Sneaker"
+                ],
+                "sku": "lv-trainer-sneaker",
+                "price": 250,
+                "priceSale": 247,
+                "available": 76,
+                "sold": 14,
+                "reviews": [
+                    "6698bc856d5c3e91d175ed63"
+                ],
+                "shop": "6694cb58b8ab14e1e1d84947",
+                "images": [
+                    {
+                        "_id": "louis-vuitton--BP9U6PGC26_PM2_Front_view_dtxifa",
+                        "url": "https://res.cloudinary.com/dcuwtg4h1/image/upload/v1721105274/louis-vuitton--BP9U6PGC26_PM2_Front_view_dtxifa.avif"
+                    },
+                    {
+                        "_id": "louis-vuitton--BP9U6PGC14_PM2_Front_view_bs0jsg",
+                        "url": "https://res.cloudinary.com/dcuwtg4h1/image/upload/v1721105386/louis-vuitton--BP9U6PGC14_PM2_Front_view_bs0jsg.avif"
+                    }
+                ],
+                "colors": [
+                    "blue",
+                    "pink"
+                ],
+                "sizes": [
+                    "7",
+                    "8",
+                    "9"
+                ],
+                "createdAt": "2024-07-16T04:53:15.565Z",
+                "updatedAt": "2024-07-31T04:28:07.633Z",
+                "__v": 0
+            },
+            {
+                "_id": "66978913a0dd17342cf7745d",
+                "name": "NBA LOS ANGELES LAKERS OLD ENGLISH MEN'S SWEATPANT",
+                "code": "32648763",
+                "status": "new",
+                "isFeatured": true,
+                "brand": "6694aef5c71c3b718e0cf02e",
+                "likes": 2,
+                "description": "Athletic competition dates back. The Old English Capsule features the Renaissance-esque typeface alongside team emblems. Display your loyalty, feel like fan royalty, and conquer the day's look.\n\nThe Pro Standard sweatpants is cozy and stylish and will take your athleisure look to the next level. Made from brushed cotton fleece, these sweatpants are super soft and comfortable. They feature two hand pockets, a drawstring waistband, and elastic ankle cuffs make these pants a solid choice for those comfy days. The evelated team logos make this a must-have piece in your wardrobe.\n\n•Features officially licensed team, and league logos\n•A comfortable and relaxed feel\n•Drawstring Waistband\n•Two front slit pockets\n•Imported",
+                "metaTitle": "NBA LOS ANGELES LAKERS OLD ENGLISH MEN'S SWEATPANT",
+                "metaDescription": "Athletic competition dates back. The Old English Capsule features the Renaissance-esque typeface alongside team emblems. Display your loyalty, feel like fan royalty, and conquer the day's look.\n\nThe Pro Standard sweatpants is cozy and stylish and will take your athleisure look to the next level. Made from brushed cotton fleece, these sweatpants are super soft and comfortable. They feature two hand pockets, a drawstring waistband, and elastic ankle cuffs make these pants a solid choice for those comfy days. The evelated team logos make this a must-have piece in your wardrobe.\n\n•Features officially licensed team, and league logos\n•A comfortable and relaxed feel\n•Drawstring Waistband\n•Two front slit pockets\n•Imported",
+                "slug": "nba-los-angeles-lakers-old-english-mens-sweatpant",
+                "category": "6694db176f766d8706107b64",
+                "subCategory": "669542ccdfb1560d498d396e",
+                "gender": "men",
+                "tags": [
+                    "lakers",
+                    "track pant"
+                ],
+                "sku": "classic-track-pants-white",
+                "price": 60,
+                "priceSale": 58,
+                "available": 77,
+                "sold": 13,
+                "reviews": [],
+                "shop": "6694c7fee3910dc7095f4edf",
+                "images": [
+                    {
+                        "_id": "BLL4515750-YEL_2_bpt1rq",
+                        "url": "https://res.cloudinary.com/dcuwtg4h1/image/upload/v1721207000/BLL4515750-YEL_2_bpt1rq.webp"
+                    },
+                    {
+                        "_id": "BLL4515750-BLK_2_d275cw",
+                        "url": "https://res.cloudinary.com/dcuwtg4h1/image/upload/v1721207038/BLL4515750-BLK_2_d275cw.webp"
+                    }
+                ],
+                "colors": [
+                    "yellow",
+                    "black"
+                ],
+                "sizes": [
+                    "sm",
+                    "md",
+                    "lg"
+                ],
+                "createdAt": "2024-07-17T09:04:19.981Z",
+                "updatedAt": "2024-08-02T07:25:19.711Z",
+                "__v": 0
+            },
+            {
+                "_id": "668ad1928da0594614a1ef58",
+                "name": "Gucci White Oversize T-Shirt",
+                "code": "gucci-white-102",
+                "status": "sale",
+                "isFeatured": true,
+                "brand": "668ad2c1a1d28ec94c6f3bbe",
+                "likes": 0,
+                "description": "Gucci White Oversize T-Shirt\n\n",
+                "metaTitle": "Gucci White Oversize T-Shirt",
+                "metaDescription": "Gucci White Oversize T-Shirt\n\n",
+                "slug": "gucci-white-oversize-tshirt",
+                "category": "6694dcf87d2217075e3b1d8b",
+                "subCategory": "6694e2ac4160642f0c948c0b",
+                "gender": "men",
+                "tags": [
+                    "gucci",
+                    "t shirt"
+                ],
+                "sku": "gucci-white-102",
+                "price": 119,
+                "priceSale": 98,
+                "available": 111,
+                "sold": 9,
+                "reviews": [],
+                "shop": "6694c7fee3910dc7095f4edf",
+                "images": [
+                    {
+                        "_id": "5de41f123719a1202feb9b8c_gucci_logo_explained_by_ebaqdesign_square-300x300_hs6p49",
+                        "url": "https://res.cloudinary.com/dcuwtg4h1/image/upload/v1720373848/lg_Do0unp0pziV9Nm5uhATiDNU8mmkk4KiYap65pVl2_fmlslu_qroum7_1_usffpf.webp"
+                    }
+                ],
+                "colors": [
+                    "white",
+                    "yellow",
+                    "pink"
+                ],
+                "sizes": [
+                    "S",
+                    "M",
+                    "L"
+                ],
+                "createdAt": "2024-07-07T17:34:10.887Z",
+                "updatedAt": "2024-07-27T11:52:19.122Z",
+                "__v": 0
+            },
+            {
+                "_id": "66978b01f263b02c3ce903e6",
+                "name": "LV Clash Square Sunglasses",
+                "code": "73456373",
+                "status": "new",
+                "isFeatured": true,
+                "brand": "6694a97d60f46d565b19153b",
+                "likes": 0,
+                "description": "The LV Clash Square Sunglasses are a bold addition to the Spring-Summer 2022 Eyewear Collection for men. The new style features a modern shape and an oversized frame for a confident look. This accessory pays homage to the House with distinctive LV Initials on each temple.\n\nBlack frame\nBlack lenses\nSquare shape\nGold-color hardware\nLV Initials on temples",
+                "metaTitle": "LV Clash Square Sunglasses",
+                "metaDescription": "The LV Clash Square Sunglasses are a bold addition to the Spring-Summer 2022 Eyewear Collection for men. The new style features a modern shape and an oversized frame for a confident look. This accessory pays homage to the House with distinctive LV Initials on each temple.\n\nBlack frame\nBlack lenses\nSquare shape\nGold-color hardware\nLV Initials on temples",
+                "slug": "lv-clash-square-sunglasses",
+                "category": "6694dddb82a99e8f72e0e913",
+                "subCategory": "6694e518b8b8c22910cf5db9",
+                "gender": "",
+                "tags": [
+                    "LV Clash Square Sunglasses",
+                    "eyewear",
+                    "lv"
+                ],
+                "sku": "lv-clash-square-sunglasses",
+                "price": 120,
+                "priceSale": 118,
+                "available": 198,
+                "sold": 2,
+                "reviews": [],
+                "shop": "6694c7fee3910dc7095f4edf",
+                "images": [
+                    {
+                        "_id": "louis-vuitton-lv-clash-square-sunglasses-s00-sunglasses--Z1579W_PM2_Front_view_rvscoy",
+                        "url": "https://res.cloudinary.com/dcuwtg4h1/image/upload/v1721207505/louis-vuitton-lv-clash-square-sunglasses-s00-sunglasses--Z1579W_PM2_Front_view_rvscoy.webp"
+                    },
+                    {
+                        "_id": "louis-vuitton-lv-clash-square-sunglasses--Z1579E_PM1_Side_view_wi2vkg",
+                        "url": "https://res.cloudinary.com/dcuwtg4h1/image/upload/v1721207548/louis-vuitton-lv-clash-square-sunglasses--Z1579E_PM1_Side_view_wi2vkg.webp"
+                    }
+                ],
+                "colors": [
+                    "black"
+                ],
+                "sizes": [
+                    "w"
+                ],
+                "createdAt": "2024-07-17T09:12:35.078Z",
+                "updatedAt": "2024-07-31T04:28:07.632Z",
+                "__v": 0
+            },
+            {
+                "_id": "6695f1a1997d21007129fad9",
+                "name": "SLEEVE BASKETBALL T-SHIRT FOR MEN - BLACK",
+                "code": "5625432",
+                "status": "sale",
+                "isFeatured": true,
+                "brand": "6694aef5c71c3b718e0cf02e",
+                "likes": 0,
+                "description": "100% cotton\nLos Angeles Lakers vintage logo\nTeam OG 2.0 Premium Model\nCelebrate the Lakers heritage in style. Exclusively available at Marmon Sports, the Team OG 2.0 Premium T-Shirt is a declaration of passion for basketball.",
+                "metaTitle": "SLEEVE BASKETBALL T-SHIRT FOR MEN - BLACK",
+                "metaDescription": "100% cotton\nLos Angeles Lakers vintage logo\nTeam OG 2.0 Premium Model\nCelebrate the Lakers heritage in style. Exclusively available at Marmon Sports, the Team OG 2.0 Premium T-Shirt is a declaration of passion for basketball.",
+                "slug": "sleeve-basketball-tshirt-for-men-black",
+                "category": "6694dcf87d2217075e3b1d8b",
+                "subCategory": "6694e2ac4160642f0c948c0b",
+                "gender": "",
+                "tags": [
+                    "SLEEVE BASKETBALL T-SHIRT FOR MEN - BLACK",
+                    "lakers"
+                ],
+                "sku": "sleeve-basketball-tshirt-for-men-black",
+                "price": 70,
+                "priceSale": 68,
+                "available": 98,
+                "sold": 2,
+                "reviews": [],
+                "shop": "6694cb58b8ab14e1e1d84947",
+                "images": [
+                    {
+                        "_id": "mitchell-ness-nba-los-angeles-lakers-team-og-20-premium-vintage-logo-short-sleeve-basketball-t-shirt-for-men-black_kp8g4z",
+                        "url": "https://res.cloudinary.com/dcuwtg4h1/image/upload/v1721102694/mitchell-ness-nba-los-angeles-lakers-team-og-20-premium-vintage-logo-short-sleeve-basketball-t-shirt-for-men-black_kp8g4z.jpg"
+                    },
+                    {
+                        "_id": "mitchell-ness-nba-los-angeles-lakers-team-og-20-premium-vintage-logo-short-sleeve-basketball-t-shirt-for-men-black_l6eefv",
+                        "url": "https://res.cloudinary.com/dcuwtg4h1/image/upload/v1721102711/mitchell-ness-nba-los-angeles-lakers-team-og-20-premium-vintage-logo-short-sleeve-basketball-t-shirt-for-men-black_l6eefv.jpg"
+                    },
+                    {
+                        "_id": "mitchell-ness-nba-los-angeles-lakers-team-og-20-premium-vintage-logo-short-sleeve-basketball-t-shirt-for-men-black_k9vsp9",
+                        "url": "https://res.cloudinary.com/dcuwtg4h1/image/upload/v1721102724/mitchell-ness-nba-los-angeles-lakers-team-og-20-premium-vintage-logo-short-sleeve-basketball-t-shirt-for-men-black_k9vsp9.jpg"
+                    }
+                ],
+                "colors": [
+                    "black"
+                ],
+                "sizes": [
+                    "sm",
+                    "md",
+                    "lg"
+                ],
+                "createdAt": "2024-07-16T04:05:53.675Z",
+                "updatedAt": "2024-07-18T06:57:18.689Z",
+                "__v": 0
+            }
+        ],
+        "ordersReport": [
+            16,
+            0,
+            1,
+            0,
+            0
+        ],
+        "incomeReport": {
+            "week": [
+                0,
+                0,
+                0,
+                33,
+                0,
+                0,
+                0
+            ],
+            "month": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                33,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "year": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                5972,
+                33,
+                0,
+                0,
+                0,
+                0
+            ]
+        },
+        "commissionReport": {
+            "week": [
+                0,
+                0,
+                0,
+                3.3000000000000007,
+                0,
+                0,
+                0
+            ],
+            "month": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                3.3000000000000007,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "year": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                597.1999999999998,
+                3.3000000000000007,
+                0,
+                0,
+                0,
+                0
+            ]
+        },
+        "totalUsers": 10,
+        "totalVendors": 4,
+        "totalShops": 5,
+        "totalPendingOrders": 16,
+        "totalReturnOrders": 0,
+        "totalProducts": 13,
+        "dailyOrders": 0,
+        "dailyEarning": 0
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "data": [
+        {
+            "_id": "create",
+            "name": "Stripe",
+            "status": "active",
+            "createdAt": "2024-08-15T04:06:26.696Z",
+            "updatedAt": "2024-08-19T08:33:04.040Z",
+            "__v": 0,
+            "publicKey": "",
+            "secretKey": "",
+            "mode": "development"
+        },
+        {
+            "_id": "create1",
+            "name": "PayPal",
+            "status": "active",
+            "createdAt": "2024-08-15T04:06:26.696Z",
+            "updatedAt": "2024-08-19T08:33:04.040Z",
+            "__v": 0,
+            "publicKey": "",
+            "secretKey": "",
+            "mode": "development"
+        }
+    ],
+    "count": 1
+}

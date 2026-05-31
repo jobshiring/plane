@@ -1,0 +1,119 @@
+{
+    "success": true,
+    "data": [
+        {
+            "_id": "66b3488731b759b1a51b57e7",
+            "opened": true,
+            "title": "Ssekyejwe  James placed an order from Kampala.",
+            "orderId": "66b3488731b759b1a51b57e5",
+            "city": "Kampala",
+            "paymentMethod": "COD",
+            "createdAt": "2024-08-07T10:12:23.874Z",
+            "updatedAt": "2024-08-08T17:31:12.940Z",
+            "__v": 0
+        },
+        {
+            "_id": "66aa0ef125893faddb3a9e27",
+            "opened": true,
+            "title": "Ankit Kumar placed an order from Ghaziabad.",
+            "orderId": "66aa0ef125893faddb3a9e25",
+            "city": "Ghaziabad",
+            "paymentMethod": "COD",
+            "createdAt": "2024-07-31T10:16:17.867Z",
+            "updatedAt": "2024-08-07T05:28:26.163Z",
+            "__v": 0
+        },
+        {
+            "_id": "66a9bd583caad398c20d5f92",
+            "opened": true,
+            "title": "Nayanatha Liyanage placed an order from Boralesgamuwa.",
+            "orderId": "66a9bd573caad398c20d5f8e",
+            "city": "Boralesgamuwa",
+            "paymentMethod": "COD",
+            "createdAt": "2024-07-31T04:28:08.053Z",
+            "updatedAt": "2024-08-02T07:32:46.830Z",
+            "__v": 0
+        },
+        {
+            "_id": "66a94fad19a1a5663dbe93af",
+            "opened": true,
+            "title": "Arman Melkonyan placed an order from Yerevan.",
+            "orderId": "66a94fad19a1a5663dbe93ad",
+            "city": "Yerevan",
+            "paymentMethod": "COD",
+            "createdAt": "2024-07-30T20:40:13.838Z",
+            "updatedAt": "2024-08-08T09:45:19.469Z",
+            "__v": 0
+        },
+        {
+            "_id": "66a8a53de7c6607f04d918ac",
+            "opened": true,
+            "title": "GERARD NDAYISENGA placed an order from islands.",
+            "orderId": "66a8a53de7c6607f04d918aa",
+            "city": "islands",
+            "paymentMethod": "COD",
+            "createdAt": "2024-07-30T08:33:01.742Z",
+            "updatedAt": "2024-07-30T12:02:24.808Z",
+            "__v": 0
+        },
+        {
+            "_id": "66a85027deff9d958a282098",
+            "opened": true,
+            "title": "Jean  Mathews  placed an order from Chengannur .",
+            "orderId": "66a85027deff9d958a282096",
+            "city": "Chengannur ",
+            "paymentMethod": "COD",
+            "createdAt": "2024-07-30T02:29:59.789Z",
+            "updatedAt": "2024-08-08T09:45:33.745Z",
+            "__v": 0
+        },
+        {
+            "_id": "66a6ec50fa7aee9bfa78c179",
+            "opened": true,
+            "title": "Muhammad Ali placed an order from ddddd.",
+            "orderId": "66a6ec50fa7aee9bfa78c175",
+            "city": "ddddd",
+            "paymentMethod": "COD",
+            "createdAt": "2024-07-29T01:11:44.787Z",
+            "updatedAt": "2024-07-29T16:32:22.139Z",
+            "__v": 0
+        },
+        {
+            "_id": "66a4df733a8916c3b78b70cf",
+            "opened": true,
+            "title": "chouaib chuaib placed an order from Boufarik.",
+            "orderId": "66a4df733a8916c3b78b70cb",
+            "city": "Boufarik",
+            "paymentMethod": "COD",
+            "createdAt": "2024-07-27T11:52:19.534Z",
+            "updatedAt": "2024-07-30T03:19:09.465Z",
+            "__v": 0
+        },
+        {
+            "_id": "669e88bd79772b152533a860",
+            "opened": true,
+            "title": "gfhfg gfhfg placed an order from sdfsd.",
+            "orderId": "669e88bd79772b152533a85b",
+            "city": "sdfsd",
+            "paymentMethod": "COD",
+            "createdAt": "2024-07-22T16:28:45.253Z",
+            "updatedAt": "2024-07-26T20:00:44.068Z",
+            "__v": 0
+        },
+        {
+            "_id": "669e1c528aaeb81afd74e2e8",
+            "opened": true,
+            "title": "Muhammad Ali placed an order from dsadsadsad.",
+            "orderId": "669e1c528aaeb81afd74e2e4",
+            "city": "dsadsadsad",
+            "paymentMethod": "COD",
+            "createdAt": "2024-07-22T08:46:10.823Z",
+            "updatedAt": "2024-07-22T08:47:34.446Z",
+            "__v": 0
+        }
+    ],
+    "totalNotifications": 19,
+    "totalUnread": 0,
+    "count": 0,
+    "currentPage": 1
+}

@@ -1,0 +1,42 @@
+import { alpha } from '@mui/material';
+
+// ----------------------------------------------------------------------
+
+export default function Pagination(theme) {
+  return {
+    MuiPaginationItem: {
+      styleOverrides: {
+        root: {
+          '&.Mui-selected': {
+            fontWeight: theme.typography.fontWeightBold,
+          },
+          '&.MuiPaginationItem-ellipsis': {
+            borderRadius: '4px',
+            height: 32,
+          },
+        },
+        textPrimary: {
+          '&.Mui-selected': {
+            color: theme.palette.primary.main,
+            backgroundColor: alpha(theme.palette.primary.main, 0.08),
+            '&:hover, &.Mui-focusVisible': {
+              backgroundColor: `${alpha(
+                theme.palette.primary.main,
+                0.24
+              )} !important`,
+            },
+          },
+        },
+        outlined: {
+          border: `1px solid ${theme.palette.divider}`,
+        },
+        outlinedPrimary: {
+          '&.Mui-selected': {
+            backgroundColor: alpha(theme.palette.primary.main, 0.08),
+            border: `1px solid ${alpha(theme.palette.primary.main, 0.24)}`,
+          },
+        },
+      },
+    },
+  };
+}

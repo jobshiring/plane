@@ -1,0 +1,1147 @@
+{
+    "data": [
+
+  {
+     "_id": "68e375bca3cb569213c398ae",
+    "bookingDetails": {
+      "type": "flight-offer",
+      "_id": "1",
+      "source": "GDS",
+      "instantTicketingRequired": false,
+      "nonHomogeneous": false,
+      "oneWay": false,
+      "isUpsellOffer": false,
+      "lastTicketingDate": "2025-02-13",
+      "lastTicketingDateTime": "2025-02-13",
+      "numberOfBookableSeats": 9,
+      "itineraries": [
+        {
+          "duration": "PT11H10M",
+          "segments": [
+            {
+              "departure": {
+                "iataCode": "LHR",
+                "terminal": "4",
+                "at": "2025-02-13T10:00:00"
+              },
+              "arrival": {
+                "iataCode": "RUH",
+                "terminal": "4",
+                "at": "2025-02-13T19:30:00"
+              },
+              "carrierCode": "SV",
+              "number": "110",
+              "aircraft": {
+                "code": "777"
+              },
+              "operating": {
+                "carrierCode": "SV"
+              },
+              "duration": "PT6H30M",
+              "id": "23",
+              "numberOfStops": 0,
+              "blacklistedInEU": false
+            },
+            {
+              "departure": {
+                "iataCode": "RUH",
+                "terminal": "4",
+                "at": "2025-02-13T22:15:00"
+              },
+              "arrival": {
+                "iataCode": "DXB",
+                "terminal": "1",
+                "at": "2025-02-14T01:10:00"
+              },
+              "carrierCode": "SV",
+              "number": "584",
+              "aircraft": {
+                "code": "321"
+              },
+              "operating": {
+                "carrierCode": "SV"
+              },
+              "duration": "PT1H55M",
+              "id": "24",
+              "numberOfStops": 0,
+              "blacklistedInEU": false
+            }
+          ]
+        }
+      ],
+      "price": {
+        "currency": "USD",
+        "total": 419.3,
+        "base": "149.00",
+        "fees": [
+          {
+            "amount": 0,
+            "type": "SUPPLIER"
+          },
+          {
+            "amount": "0.00",
+            "type": "TICKETING"
+          }
+        ],
+        "grandTotal": "419.26",
+        "additionalServices": [
+          {
+            "amount": "184.00",
+            "type": "CHECKED_BAGS"
+          }
+        ],
+        "convertionRate": 1,
+        "actual_price": 419.3
+      },
+      "pricingOptions": {
+        "fareType": ["PUBLISHED"],
+        "includedCheckedBagsOnly": true
+      },
+      "validatingAirlineCodes": ["SV"],
+      "travelerPricings": [
+        {
+          "travelerId": "1",
+          "fareOption": "STANDARD",
+          "travelerType": "ADULT",
+          "price": {
+            "currency": "USD",
+            "total": "419.26",
+            "base": "149.00"
+          },
+          "fareDetailsBySegment": [
+            {
+              "segmentId": "23",
+              "cabin": "ECONOMY",
+              "fareBasis": "NPOXUKB4",
+              "brandedFare": "NBASICE",
+              "brandedFareLabel": "BASIC ECO",
+              "class": "N",
+              "includedCheckedBags": {
+                "quantity": 1
+              },
+              "amenities": [
+                {
+                  "description": "BASIC SEAT",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "CHANGE FEE",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "REFUNDABLE TICKET",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "UPGRADE ELIGIBILITY",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "CHANGEABLE TICKET",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "60 PERCENT MILES EARNED",
+                  "isChargeable": false,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "FREE BAG 1PC 23KG",
+                  "isChargeable": false,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                }
+              ]
+            },
+            {
+              "segmentId": "24",
+              "cabin": "ECONOMY",
+              "fareBasis": "NPOXUKB4",
+              "brandedFare": "NBASICE",
+              "brandedFareLabel": "BASIC ECO",
+              "class": "N",
+              "includedCheckedBags": {
+                "quantity": 1
+              },
+              "amenities": [
+                {
+                  "description": "BASIC SEAT",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "CHANGE FEE",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "REFUNDABLE TICKET",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "UPGRADE ELIGIBILITY",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "CHANGEABLE TICKET",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "60 PERCENT MILES EARNED",
+                  "isChargeable": false,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "FREE BAG 1PC 23KG",
+                  "isChargeable": false,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+
+      "supplier": "amadeus",
+      "backUrl": "/en/flights/london-lhr/dubai-dxb/oneway/economy/1/0/0/2025-03-06"
+    },
+    "travelers": [
+      {
+        "_id": "1",
+        "dateOfBirth": "1998-02-02",
+        "name": {
+          "firstName": "Kamran",
+          "lastName": "Haider"
+        },
+        "gender": "MALE",
+        "documents": [
+          {
+            "documentType": "Passport",
+            "number": "123123123",
+            "expiryDate": "2025-01-01",
+            "issuanceCountry": "PK",
+            "nationality": "PK",
+            "holder": true
+          }
+        ]
+      }
+    ],
+    "phone": "+923035501602",
+    "email": "kamran@test.com",
+    "firstName": "Kamran",
+    "lastName": "Haider",
+    "paymentMethod": "Paypal",
+    "bookingStatus": "pending",
+    "paymentStatus": "unpaid",
+    "bookingId": "INV-1",
+    "PNR": "PNR-1",
+    "createdAt": 1741073273376
+  },
+
+  {
+     "_id": "68e375bca3cb569213c388ee",
+    "bookingDetails": {
+      "type": "flight-offer",
+      "_id": "1",
+      "source": "GDS",
+      "instantTicketingRequired": false,
+      "nonHomogeneous": false,
+      "oneWay": false,
+      "isUpsellOffer": false,
+      "lastTicketingDate": "2025-02-13",
+      "lastTicketingDateTime": "2025-02-13",
+      "numberOfBookableSeats": 9,
+      "itineraries": [
+        {
+          "duration": "PT11H10M",
+          "segments": [
+            {
+              "departure": {
+                "iataCode": "LHR",
+                "terminal": "4",
+                "at": "2025-02-13T10:00:00"
+              },
+              "arrival": {
+                "iataCode": "RUH",
+                "terminal": "4",
+                "at": "2025-02-13T19:30:00"
+              },
+              "carrierCode": "SV",
+              "number": "110",
+              "aircraft": {
+                "code": "777"
+              },
+              "operating": {
+                "carrierCode": "SV"
+              },
+              "duration": "PT6H30M",
+              "id": "23",
+              "numberOfStops": 0,
+              "blacklistedInEU": false
+            },
+            {
+              "departure": {
+                "iataCode": "RUH",
+                "terminal": "4",
+                "at": "2025-02-13T22:15:00"
+              },
+              "arrival": {
+                "iataCode": "DXB",
+                "terminal": "1",
+                "at": "2025-02-14T01:10:00"
+              },
+              "carrierCode": "SV",
+              "number": "584",
+              "aircraft": {
+                "code": "321"
+              },
+              "operating": {
+                "carrierCode": "SV"
+              },
+              "duration": "PT1H55M",
+              "id": "24",
+              "numberOfStops": 0,
+              "blacklistedInEU": false
+            }
+          ]
+        }
+      ],
+      "price": {
+        "currency": "USD",
+        "total": 419.3,
+        "base": "149.00",
+        "fees": [
+          {
+            "amount": 0,
+            "type": "SUPPLIER"
+          },
+          {
+            "amount": "0.00",
+            "type": "TICKETING"
+          }
+        ],
+        "grandTotal": "419.26",
+        "additionalServices": [
+          {
+            "amount": "184.00",
+            "type": "CHECKED_BAGS"
+          }
+        ],
+        "convertionRate": 1,
+        "actual_price": 419.3
+      },
+      "pricingOptions": {
+        "fareType": ["PUBLISHED"],
+        "includedCheckedBagsOnly": true
+      },
+      "validatingAirlineCodes": ["SV"],
+      "travelerPricings": [
+        {
+          "travelerId": "1",
+          "fareOption": "STANDARD",
+          "travelerType": "ADULT",
+          "price": {
+            "currency": "USD",
+            "total": "419.26",
+            "base": "149.00"
+          },
+          "fareDetailsBySegment": [
+            {
+              "segmentId": "23",
+              "cabin": "ECONOMY",
+              "fareBasis": "NPOXUKB4",
+              "brandedFare": "NBASICE",
+              "brandedFareLabel": "BASIC ECO",
+              "class": "N",
+              "includedCheckedBags": {
+                "quantity": 1
+              },
+              "amenities": [
+                {
+                  "description": "BASIC SEAT",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "CHANGE FEE",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "REFUNDABLE TICKET",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "UPGRADE ELIGIBILITY",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "CHANGEABLE TICKET",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "60 PERCENT MILES EARNED",
+                  "isChargeable": false,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "FREE BAG 1PC 23KG",
+                  "isChargeable": false,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                }
+              ]
+            },
+            {
+              "segmentId": "24",
+              "cabin": "ECONOMY",
+              "fareBasis": "NPOXUKB4",
+              "brandedFare": "NBASICE",
+              "brandedFareLabel": "BASIC ECO",
+              "class": "N",
+              "includedCheckedBags": {
+                "quantity": 1
+              },
+              "amenities": [
+                {
+                  "description": "BASIC SEAT",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "CHANGE FEE",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "REFUNDABLE TICKET",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "UPGRADE ELIGIBILITY",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "CHANGEABLE TICKET",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "60 PERCENT MILES EARNED",
+                  "isChargeable": false,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "FREE BAG 1PC 23KG",
+                  "isChargeable": false,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+
+      "supplier": "amadeus",
+      "backUrl": "/en/flights/london-lhr/dubai-dxb/oneway/economy/1/0/0/2025-03-06"
+    },
+    "travelers": [
+      {
+        "_id": "1",
+        "dateOfBirth": "1998-02-02",
+        "name": {
+          "firstName": "Kamran",
+          "lastName": "Haider"
+        },
+        "gender": "MALE",
+        "documents": [
+          {
+            "documentType": "Passport",
+            "number": "123123123",
+            "expiryDate": "2025-01-01",
+            "issuanceCountry": "PK",
+            "nationality": "PK",
+            "holder": true
+          }
+        ]
+      }
+    ],
+    "phone": "+923035501602",
+    "email": "kamran@test.com",
+    "firstName": "Kamran",
+    "lastName": "Haider",
+    "paymentMethod": "Paypal",
+    "bookingStatus": "completed",
+    "paymentStatus": "paid",
+    "bookingId": "INV-2",
+    "PNR": "PNR-2",
+    "createdAt": 1741073273376
+  },
+  {
+     "_id": "68e375bca3cb569213c498ie",
+    "bookingDetails": {
+      "type": "flight-offer",
+      "_id": "1",
+      "source": "GDS",
+      "instantTicketingRequired": false,
+      "nonHomogeneous": false,
+      "oneWay": false,
+      "isUpsellOffer": false,
+      "lastTicketingDate": "2025-02-13",
+      "lastTicketingDateTime": "2025-02-13",
+      "numberOfBookableSeats": 9,
+      "itineraries": [
+        {
+          "duration": "PT11H10M",
+          "segments": [
+            {
+              "departure": {
+                "iataCode": "LHR",
+                "terminal": "4",
+                "at": "2025-02-13T10:00:00"
+              },
+              "arrival": {
+                "iataCode": "RUH",
+                "terminal": "4",
+                "at": "2025-02-13T19:30:00"
+              },
+              "carrierCode": "SV",
+              "number": "110",
+              "aircraft": {
+                "code": "777"
+              },
+              "operating": {
+                "carrierCode": "SV"
+              },
+              "duration": "PT6H30M",
+              "id": "23",
+              "numberOfStops": 0,
+              "blacklistedInEU": false
+            },
+            {
+              "departure": {
+                "iataCode": "RUH",
+                "terminal": "4",
+                "at": "2025-02-13T22:15:00"
+              },
+              "arrival": {
+                "iataCode": "DXB",
+                "terminal": "1",
+                "at": "2025-02-14T01:10:00"
+              },
+              "carrierCode": "SV",
+              "number": "584",
+              "aircraft": {
+                "code": "321"
+              },
+              "operating": {
+                "carrierCode": "SV"
+              },
+              "duration": "PT1H55M",
+              "id": "24",
+              "numberOfStops": 0,
+              "blacklistedInEU": false
+            }
+          ]
+        }
+      ],
+      "price": {
+        "currency": "USD",
+        "total": 419.3,
+        "base": "149.00",
+        "fees": [
+          {
+            "amount": 0,
+            "type": "SUPPLIER"
+          },
+          {
+            "amount": "0.00",
+            "type": "TICKETING"
+          }
+        ],
+        "grandTotal": "419.26",
+        "additionalServices": [
+          {
+            "amount": "184.00",
+            "type": "CHECKED_BAGS"
+          }
+        ],
+        "convertionRate": 1,
+        "actual_price": 419.3
+      },
+      "pricingOptions": {
+        "fareType": ["PUBLISHED"],
+        "includedCheckedBagsOnly": true
+      },
+      "validatingAirlineCodes": ["SV"],
+      "travelerPricings": [
+        {
+          "travelerId": "1",
+          "fareOption": "STANDARD",
+          "travelerType": "ADULT",
+          "price": {
+            "currency": "USD",
+            "total": "419.26",
+            "base": "149.00"
+          },
+          "fareDetailsBySegment": [
+            {
+              "segmentId": "23",
+              "cabin": "ECONOMY",
+              "fareBasis": "NPOXUKB4",
+              "brandedFare": "NBASICE",
+              "brandedFareLabel": "BASIC ECO",
+              "class": "N",
+              "includedCheckedBags": {
+                "quantity": 1
+              },
+              "amenities": [
+                {
+                  "description": "BASIC SEAT",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "CHANGE FEE",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "REFUNDABLE TICKET",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "UPGRADE ELIGIBILITY",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "CHANGEABLE TICKET",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "60 PERCENT MILES EARNED",
+                  "isChargeable": false,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "FREE BAG 1PC 23KG",
+                  "isChargeable": false,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                }
+              ]
+            },
+            {
+              "segmentId": "24",
+              "cabin": "ECONOMY",
+              "fareBasis": "NPOXUKB4",
+              "brandedFare": "NBASICE",
+              "brandedFareLabel": "BASIC ECO",
+              "class": "N",
+              "includedCheckedBags": {
+                "quantity": 1
+              },
+              "amenities": [
+                {
+                  "description": "BASIC SEAT",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "CHANGE FEE",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "REFUNDABLE TICKET",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "UPGRADE ELIGIBILITY",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "CHANGEABLE TICKET",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "60 PERCENT MILES EARNED",
+                  "isChargeable": false,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "FREE BAG 1PC 23KG",
+                  "isChargeable": false,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+
+      "supplier": "amadeus",
+      "backUrl": "/en/flights/london-lhr/dubai-dxb/oneway/economy/1/0/0/2025-03-06"
+    },
+    "travelers": [
+      {
+        "_id": "1",
+        "dateOfBirth": "1998-02-02",
+        "name": {
+          "firstName": "Kamran",
+          "lastName": "Haider"
+        },
+        "gender": "MALE",
+        "documents": [
+          {
+            "documentType": "Passport",
+            "number": "123123123",
+            "expiryDate": "2025-01-01",
+            "issuanceCountry": "PK",
+            "nationality": "PK",
+            "holder": true
+          }
+        ]
+      }
+    ],
+    "phone": "+923035501602",
+    "email": "kamran@test.com",
+    "firstName": "Kamran",
+    "lastName": "Haider",
+    "paymentMethod": "Paypal",
+    "bookingStatus": "pending",
+    "paymentStatus": "unpaid",
+    "bookingId": "INV-3",
+    "PNR": "PNR-3",
+    "createdAt": 1741073273376
+  },
+  {
+     "_id": "68e375bca3cb569235c398df",
+    "bookingDetails": {
+      "type": "flight-offer",
+      "_id": "1",
+      "source": "GDS",
+      "instantTicketingRequired": false,
+      "nonHomogeneous": false,
+      "oneWay": false,
+      "isUpsellOffer": false,
+      "lastTicketingDate": "2025-02-13",
+      "lastTicketingDateTime": "2025-02-13",
+      "numberOfBookableSeats": 9,
+      "itineraries": [
+        {
+          "duration": "PT11H10M",
+          "segments": [
+            {
+              "departure": {
+                "iataCode": "LHR",
+                "terminal": "4",
+                "at": "2025-02-13T10:00:00"
+              },
+              "arrival": {
+                "iataCode": "RUH",
+                "terminal": "4",
+                "at": "2025-02-13T19:30:00"
+              },
+              "carrierCode": "SV",
+              "number": "110",
+              "aircraft": {
+                "code": "777"
+              },
+              "operating": {
+                "carrierCode": "SV"
+              },
+              "duration": "PT6H30M",
+              "id": "23",
+              "numberOfStops": 0,
+              "blacklistedInEU": false
+            },
+            {
+              "departure": {
+                "iataCode": "RUH",
+                "terminal": "4",
+                "at": "2025-02-13T22:15:00"
+              },
+              "arrival": {
+                "iataCode": "DXB",
+                "terminal": "1",
+                "at": "2025-02-14T01:10:00"
+              },
+              "carrierCode": "SV",
+              "number": "584",
+              "aircraft": {
+                "code": "321"
+              },
+              "operating": {
+                "carrierCode": "SV"
+              },
+              "duration": "PT1H55M",
+              "id": "24",
+              "numberOfStops": 0,
+              "blacklistedInEU": false
+            }
+          ]
+        }
+      ],
+      "price": {
+        "currency": "USD",
+        "total": 419.3,
+        "base": "149.00",
+        "fees": [
+          {
+            "amount": 0,
+            "type": "SUPPLIER"
+          },
+          {
+            "amount": "0.00",
+            "type": "TICKETING"
+          }
+        ],
+        "grandTotal": "419.26",
+        "additionalServices": [
+          {
+            "amount": "184.00",
+            "type": "CHECKED_BAGS"
+          }
+        ],
+        "convertionRate": 1,
+        "actual_price": 419.3
+      },
+      "pricingOptions": {
+        "fareType": ["PUBLISHED"],
+        "includedCheckedBagsOnly": true
+      },
+      "validatingAirlineCodes": ["SV"],
+      "travelerPricings": [
+        {
+          "travelerId": "1",
+          "fareOption": "STANDARD",
+          "travelerType": "ADULT",
+          "price": {
+            "currency": "USD",
+            "total": "419.26",
+            "base": "149.00"
+          },
+          "fareDetailsBySegment": [
+            {
+              "segmentId": "23",
+              "cabin": "ECONOMY",
+              "fareBasis": "NPOXUKB4",
+              "brandedFare": "NBASICE",
+              "brandedFareLabel": "BASIC ECO",
+              "class": "N",
+              "includedCheckedBags": {
+                "quantity": 1
+              },
+              "amenities": [
+                {
+                  "description": "BASIC SEAT",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "CHANGE FEE",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "REFUNDABLE TICKET",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "UPGRADE ELIGIBILITY",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "CHANGEABLE TICKET",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "60 PERCENT MILES EARNED",
+                  "isChargeable": false,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "FREE BAG 1PC 23KG",
+                  "isChargeable": false,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                }
+              ]
+            },
+            {
+              "segmentId": "24",
+              "cabin": "ECONOMY",
+              "fareBasis": "NPOXUKB4",
+              "brandedFare": "NBASICE",
+              "brandedFareLabel": "BASIC ECO",
+              "class": "N",
+              "includedCheckedBags": {
+                "quantity": 1
+              },
+              "amenities": [
+                {
+                  "description": "BASIC SEAT",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "CHANGE FEE",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "REFUNDABLE TICKET",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "UPGRADE ELIGIBILITY",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "CHANGEABLE TICKET",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "60 PERCENT MILES EARNED",
+                  "isChargeable": false,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "FREE BAG 1PC 23KG",
+                  "isChargeable": false,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+
+      "supplier": "amadeus",
+      "backUrl": "/en/flights/london-lhr/dubai-dxb/oneway/economy/1/0/0/2025-03-06"
+    },
+    "travelers": [
+      {
+        "_id": "1",
+        "dateOfBirth": "1998-02-02",
+        "name": {
+          "firstName": "Kamran",
+          "lastName": "Haider"
+        },
+        "gender": "MALE",
+        "documents": [
+          {
+            "documentType": "Passport",
+            "number": "123123123",
+            "expiryDate": "2025-01-01",
+            "issuanceCountry": "PK",
+            "nationality": "PK",
+            "holder": true
+          }
+        ]
+      }
+    ],
+    "phone": "+923035501602",
+    "email": "kamran@test.com",
+    "firstName": "Kamran",
+    "lastName": "Haider",
+    "paymentMethod": "Paypal",
+    "bookingStatus": "completed",
+    "paymentStatus": "paid",
+    "bookingId": "INV-4",
+    "PNR": "PNR-4",
+    "createdAt": 1741073273376
+  }
+    ],
+    "count": 0
+}

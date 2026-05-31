@@ -1,0 +1,34 @@
+[
+  {
+    "_id": "66c6bed4ea512c9213f04826",
+    "name": "US Dollar",
+    "code": "USD",
+    "country": "United States",
+    "base": false,
+    "rate": 1
+  },
+  {
+    "_id": "66c6bee6ea512c9213f0482b",
+    "name": "Pakistani Rupee",
+    "code": "PKR",
+    "country": "Pakistan",
+    "base": false,
+    "rate": 280
+  },
+  {
+    "_id": "66c6bf12ea512c9213f04830",
+    "name": "Euro",
+    "code": "EUR",
+    "country": "European Union",
+    "base": true,
+    "rate": 1
+  },
+  {
+    "_id": "66cff63bcb34ec8fdf214acd",
+    "name": "Azerbaijani Manat",
+    "code": "AZN",
+    "country": "Azerbaijan",
+    "base": true,
+    "rate": 1
+  }
+]

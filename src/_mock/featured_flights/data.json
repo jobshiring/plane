@@ -1,0 +1,74 @@
+{
+    "data": [
+        {
+            "cover": {
+                "_id": "photo-1525625293386-3f8f99389edd_wbgob9",
+                "url": "https://res.cloudinary.com/dcuwtg4h1/image/upload/v1741591673/photo-1525625293386-3f8f99389edd_wbgob9.jpg"
+            },
+            "_id": "67ce947d5e0ed05a74e48c61",
+            "status": "active",
+            "departure": {
+                "city": "Chicago",
+                "iataCode": "ORD",
+                "_id": "67ce947d5e0ed05a74e48c62"
+            },
+            "arrival": {
+                "city": "Singapore",
+                "iataCode": "SIN",
+                "_id": "67ce947d5e0ed05a74e48c63"
+            },
+            "departureDate": "2025-04-18T00:00:00.000Z",
+            "tripType": "oneway",
+            "createdAt": "2025-03-10T07:27:57.317Z",
+            "updatedAt": "2025-03-10T07:27:57.317Z",
+            "__v": 0
+        },
+        {
+            "cover": {
+                "_id": "a0002533_main_lq8xnr",
+                "url": "https://res.cloudinary.com/dcuwtg4h1/image/upload/v1741591624/a0002533_main_lq8xnr.webp"
+            },
+            "_id": "67ce944b5e0ed05a74e48c4d",
+            "status": "active",
+            "departure": {
+                "city": "Toronto",
+                "iataCode": "YYZ",
+                "_id": "67ce944b5e0ed05a74e48c4e"
+            },
+            "arrival": {
+                "city": "Tokyo",
+                "iataCode": "HND",
+                "_id": "67ce944b5e0ed05a74e48c4f"
+            },
+            "departureDate": "2025-03-26T00:00:00.000Z",
+            "tripType": "oneway",
+            "createdAt": "2025-03-10T07:27:07.745Z",
+            "updatedAt": "2025-03-10T07:27:07.745Z",
+            "__v": 0
+        },
+        {
+            "cover": {
+                "_id": "London_-_das_grüne_London_entdecken-199835.541f8de9_yxf4vb",
+                "url": "https://res.cloudinary.com/dcuwtg4h1/image/upload/v1741591558/London_-_das_gru%CC%88ne_London_entdecken-199835.541f8de9_yxf4vb.jpg"
+            },
+            "_id": "67ce94095e0ed05a74e48c3d",
+            "status": "active",
+            "departure": {
+                "city": "Toronto",
+                "iataCode": "YYZ",
+                "_id": "67ce94095e0ed05a74e48c3e"
+            },
+            "arrival": {
+                "city": "London",
+                "iataCode": "LHR",
+                "_id": "67ce94095e0ed05a74e48c3f"
+            },
+            "departureDate": "2025-03-12T00:00:00.000Z",
+            "tripType": "oneway",
+            "createdAt": "2025-03-10T07:26:01.133Z",
+            "updatedAt": "2025-03-10T07:26:01.133Z",
+            "__v": 0
+        }
+    ],
+    "count": 1
+}

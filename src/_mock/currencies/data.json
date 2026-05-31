@@ -1,0 +1,23 @@
+{
+    "data": [
+        {
+            "_id": "68c716edae2d13f8c9c49605",
+            "name": "Euro",
+            "code": "EUR",
+            "country": "European Union",
+            "status": "active",
+            "rate": null,
+            "createdAt": "2025-09-14T19:26:37.181Z"
+        },
+        {
+            "_id": "673850d0d2f3a8de6eec68e6",
+            "name": "US Dollar",
+            "code": "USD",
+            "country": "United States",
+            "status": "active",
+            "rate": 1,
+            "createdAt": "2024-11-16T07:59:12.205Z"
+        }
+    ],
+    "count": 1
+}

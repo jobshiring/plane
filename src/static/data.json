@@ -1,0 +1,74 @@
+{
+  "mainSettings": {
+    "seo": {
+      "metaTitle": "React Flights Booking Software",
+      "description": "Reactflights offers a flight booking platform designed for flights agencies to enhance their services.",
+      "metaDescription": "React Flights Booking Software",
+      "tags": ["React Flights", "React Travel", "React", "Travels", "Travel"]
+    },
+    "theme": {
+      "isStatic": true,
+      "palette": {
+        "primary": "#1A69BC",
+        "secondary": "#CC2131",
+        "defaultDark": "#161C24",
+        "defaultLight": "#ffffff",
+        "paperDark": "#212B36",
+        "paperLight": "#F9FAFB"
+      },
+      "logoDark": {
+        "_id": "reactflightsdark_gfm4bx",
+        "url": "/logo-dark.png"
+      },
+      "logoLight": {
+        "_id": "reactflightslight_ho9rvr",
+        "url": "/logo-light.png"
+      },
+      "favicon": {
+        "_id": "favicon_n5hz7i",
+        "url": "/favicon.ico"
+      },
+      "themeName": "defualt"
+    },
+    "businessName": "React Flights",
+    "domainName": "Reactflights",
+    "licenceKey": "TEST1234",
+    "websiteStatus": true,
+    "offlineMessage": "The website is down."
+  },
+  "accounts": {
+    "guestBooking": true,
+    "usersRegistration": true,
+    "suppliersRegistration": false,
+    "agentsRegistration": true
+  },
+  "systemSettings": {
+    "gtmId": "",
+    "gaId": ""
+  },
+  "contact": {
+    "address": "Sargodha, Pakistan",
+    "addressOnMap": "Sargodha, Pakistan",
+    "email": "kamranansari5580@gmail.com",
+    "lat": "32.0836",
+    "long": "72.6711",
+    "phone": "923035501602",
+    "whatsappNo": "+923035501602"
+  },
+  "languageAndCurrencies": {
+    "multiLanguage": true,
+    "multiCurrency": true
+  },
+  "socialLinks": {
+    "facebook": "https://www.instagram.com/",
+    "twitter": "https://www.instagram.com/",
+    "linkedin": "https://www.instagram.com/",
+    "instagram": "https://www.instagram.com/",
+    "whatsapp": "https://www.instagram.com/"
+  },
+  "_id": "66b0689c9b13b1a3eb036b55",
+  "createdAt": "2024-08-05T05:52:28.372Z",
+  "updatedAt": "2024-09-01T02:39:00.961Z",
+  "__v": 0
+  
+}

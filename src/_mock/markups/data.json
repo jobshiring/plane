@@ -1,0 +1,28 @@
+{
+    "data": [
+        {
+            "_id": "6874e4002d1aa82cef6d415c",
+            "status": "active",
+            "b2cMarkup": 10,
+            "b2bMarkup": 10,
+            "moduleId": {
+                "_id": "673a9bfc01cef091d576796e",
+                "name": "amadeus",
+                "color": "#ff0066",
+                "status": "active",
+                "credentials1": "4Blrg68Xi2bn2OIVIXGANqKwenN7P4ej",
+                "credentials2": "8ypPt0oR8XSZ7wpx",
+                "devMode": "development",
+                "pnrType": "auto",
+                "createdAt": "2024-11-18T01:44:28.770Z",
+                "updatedAt": "2024-11-18T01:44:28.770Z",
+                "__v": 0
+            },
+            "users": [],
+            "createdAt": "2025-07-14T11:03:28.352Z",
+            "updatedAt": "2025-07-14T11:03:28.352Z",
+            "__v": 0
+        }
+    ],
+    "count": 1
+}

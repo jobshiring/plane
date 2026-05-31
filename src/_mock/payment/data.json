@@ -1,0 +1,27 @@
+{
+    "data": [
+        {
+            "_id": "6874e4a22d1aa82cef6d41a1",
+            "name": "PayPal",
+            "publicKey": "AUA1K3WndpEkYn8jXWIf3efT2xHBZJe16umepiqrKExpwSJcLJyUJTXDB-Z3Si5TMseH2HjfMAi3-wMc",
+            "secretKey": "AUA1K3WndpEkYn8jXWIf3efT2xHBZJe16umepiqrKExpwSJcLJyUJTXDB-Z3Si5TMseH2HjfMAi3-wMc",
+            "mode": "sandbox",
+            "status": "active",
+            "createdAt": "2025-07-14T11:06:10.996Z",
+            "updatedAt": "2025-10-26T19:48:33.773Z",
+            "__v": 0
+        },
+        {
+            "_id": "6758fc788fadc7c7c84f6919",
+            "name": "Stripe",
+            "publicKey": "pk_test_51OFXCpHMOpv96LxRYoTXZ3lNHIupH4UqLfJwtHPs0wk5ZLiBhy88uBfCNzMdjM1wUIw5x8ebK3HpI3G34eLVl4yE00XEKxxw3Q",
+            "secretKey": "sk_test_51OFXCpHMOpv96LxR9pHgeAUEfp8Dvw3bGxnA4jBJj23ljfYeiWiteaSva1LwarnMJ230O2juQLR9djnmotalnJ1Q00eclJJmdV",
+            "mode": "development",
+            "status": "active",
+            "createdAt": "2024-12-11T02:44:08.537Z",
+            "updatedAt": "2025-07-14T11:04:06.057Z",
+            "__v": 0
+        }
+    ],
+    "count": 1
+}
