@@ -20,7 +20,7 @@ import TravelersSelect from '../selects/flight-travelers';
 import DatePicker from 'src/components/selects/date';
 import { FiSearch } from 'react-icons/fi';
 import dayjs from 'dayjs';
-import { useRouter } from '@bprogress/next';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { _airportSuggestions } from '@/_mock/airports';
 import { capitalize } from 'lodash';
 import { useSelector, currency } from '@/redux';
@@ -37,6 +37,7 @@ export default function FlightSearchForm({ slug }) {
   const isHome = !slug;
   const currentCurrency = useSelector(currency);
   const [airportData, setAirportData] = React.useState([]);
+  const searchParams = useSearchParams();
 
   let payload = null;
 
@@ -103,8 +104,16 @@ export default function FlightSearchForm({ slug }) {
       : dayjs().add(5, 'day')
   );
 
+  const [provider, setProvider] = React.useState(
+    searchParams?.get('provider') || 'skyscanner'
+  );
+
   const handleCabinClassChange = (event) => {
     setCabinClass(event.target.value);
+  };
+
+  const handleProviderChange = (event) => {
+    setProvider(event.target.value);
   };
 
   const isRoundTrip = tripType === 'round';
@@ -125,7 +134,7 @@ export default function FlightSearchForm({ slug }) {
         travelers.adults
       }/${travelers.childrens}/${travelers.infants}/${formatDate(
         departureDate
-      )}${tripType === 'round' ? '/' + formatDate(returnDate) : ''}`
+      )}${tripType === 'round' ? '/' + formatDate(returnDate) : ''}?provider=${provider}`
     );
   };
 
@@ -187,6 +196,23 @@ export default function FlightSearchForm({ slug }) {
               <MenuItem value="economy-premium">Economy Premium</MenuItem>
               <MenuItem value="business">Business</MenuItem>
               <MenuItem value="first">First</MenuItem>
+            </Select>
+          </FormControl>
+          <FormControl fullWidth sx={{ width: 200 }} size="small">
+            <Select
+              size="small"
+              labelId="provider-select-label"
+              id="provider-select"
+              value={provider}
+              onChange={handleProviderChange}
+              sx={{
+                '& .MuiSelect-select': {
+                  fontWeight: 500,
+                },
+              }}
+            >
+              <MenuItem value="skyscanner">Skyscanner</MenuItem>
+              <MenuItem value="kayak">Kayak</MenuItem>
             </Select>
           </FormControl>
         </Stack>

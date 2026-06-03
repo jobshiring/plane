@@ -44,27 +44,53 @@ import { generateComparisonPrices } from '@/_mock/price-providers';
 import TimelineOppositeContent, {
   timelineOppositeContentClasses,
 } from '@mui/lab/TimelineOppositeContent';
-import { parse, format } from 'date-fns';
+import { parse, parseISO, format, isValid } from 'date-fns';
 
 function convertToAmPm(time24) {
-  const timeString = time24; // Ensure it's a string
+  const timeString = String(time24 || '').trim();
+  if (!timeString) {
+    return 'TBD';
+  }
 
-  // Use correct format for time with seconds
-  const parsedTime = parse(timeString, 'HH:mm:ss', new Date());
+  try {
+    const hhmmssMatch = timeString.match(/^(\d{1,2}):(\d{2})(?::(\d{2}))?$/);
+    if (hhmmssMatch) {
+      const [, hours, minutes, seconds = '00'] = hhmmssMatch;
+      const normalized = `${hours.padStart(2, '0')}:${minutes}:${seconds}`;
+      const parsedTime = parse(normalized, 'HH:mm:ss', new Date());
+      if (isValid(parsedTime)) {
+        return format(parsedTime, 'hh:mm a');
+      }
+    }
 
-  return format(parsedTime, 'hh:mm a');
+    const isoParsed = parseISO(timeString);
+    if (isValid(isoParsed)) {
+      return format(isoParsed, 'hh:mm a');
+    }
+
+    const dateParsed = new Date(timeString);
+    if (!Number.isNaN(dateParsed.getTime())) {
+      return format(dateParsed, 'hh:mm a');
+    }
+  } catch (error) {
+    return timeString;
+  }
+
+  return timeString;
 }
 
 function formatDuration(duration) {
-  // Extract hours and minutes using regular expressions
-  const hoursMatch = duration.match(/(\d+)H/);
-  const minutesMatch = duration.match(/(\d+)M/);
+  if (!duration) {
+    return '0:00 hours';
+  }
 
-  // Extract values from the matches or default to 0 if not found
-  const hours = hoursMatch ? parseInt(hoursMatch[1]) : 0;
-  const minutes = minutesMatch ? parseInt(minutesMatch[1]) : 0;
+  const normalized = String(duration).toUpperCase().replace(/\s+/g, '');
+  const hoursMatch = normalized.match(/(\d+)H/);
+  const minutesMatch = normalized.match(/(\d+)M/);
 
-  // Format the duration as "HH:MM hours"
+  const hours = hoursMatch ? parseInt(hoursMatch[1], 10) : 0;
+  const minutes = minutesMatch ? parseInt(minutesMatch[1], 10) : 0;
+
   return `${hours}:${minutes.toString().padStart(2, '0')} hours`;
 }
 function generateTravelers(payload) {

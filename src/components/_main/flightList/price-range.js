@@ -60,6 +60,10 @@ export default function PriceRange(props) {
   const pathname = usePathname();
 
   const [loading, setLoading] = React.useState(true);
+  const [sliderValue, setSliderValue] = React.useState([
+    Math.round(Number(priceRange?.[0] ?? 0)),
+    Math.round(Number(priceRange?.[1] ?? 0)),
+  ]);
 
   const createQueryString = React.useCallback(
     (name, value) => {
@@ -70,9 +74,17 @@ export default function PriceRange(props) {
     [searchParams]
   );
 
-  const onChange = (e, v) => {
-    const queryString = createQueryString('price', v.join('_'));
-    router.push(`${pathname}?${queryString}`);
+  const onChange = (event, value) => {
+    if (Array.isArray(value)) {
+      setSliderValue(value.map((v) => Math.round(Number(v))));
+    }
+  };
+
+  const onChangeCommitted = (event, value) => {
+    if (Array.isArray(value)) {
+      const queryString = createQueryString('price', value.join('_'));
+      router.push(`${pathname}?${queryString}`);
+    }
   };
 
   React.useEffect(() => {
@@ -82,7 +94,21 @@ export default function PriceRange(props) {
         setLoading(false);
       }, 1000);
     }
-  }, [priceRange, isLoading]);
+  }, [isLoading]);
+
+  React.useEffect(() => {
+    if (
+      Array.isArray(priceRange) &&
+      priceRange.length === 2 &&
+      (sliderValue[0] !== Math.round(Number(priceRange[0])) ||
+        sliderValue[1] !== Math.round(Number(priceRange[1])))
+    ) {
+      setSliderValue([
+        Math.round(Number(priceRange[0])),
+        Math.round(Number(priceRange[1])),
+      ]);
+    }
+  }, [priceRange, sliderValue]);
 
   const formatCurrency = (value) => {
     return `$${value.toLocaleString()}`; // change $ to PKR / AED / etc.
@@ -101,17 +127,15 @@ export default function PriceRange(props) {
       ) : (
         <Box sx={{ px: 1 }}>
           <AirbnbSlider
+            value={sliderValue}
             valueLabelDisplay="on"
             valueLabelFormat={formatCurrency}
             slots={{ thumb: AirbnbThumbComponent }}
             min={Math.round(Number(priceRange[0]))}
             max={Math.round(Number(priceRange[1]))}
-            defaultValue={[
-              Math.round(Number(priceRange[0])),
-              Math.round(Number(priceRange[1])),
-            ]}
             getAriaValueText={valuetext}
-            onChangeCommitted={onChange}
+            onChange={onChange}
+            onChangeCommitted={onChangeCommitted}
             sx={{
               '& .MuiSlider-valueLabelOpen': {
                 p: '2px 4px',

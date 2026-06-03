@@ -27,7 +27,6 @@ import Filters from '@/components/_main/flightList/filters';
 import FlightLongCardSkeleton from 'src/components/skeletons/flights/flight-long-card';
 import FlightSearchLongSkeleton from 'src/components/skeletons/flights/flight-search-long';
 // import ExpiryCountDown from "@/components/expiryCountdown";
-import { _flights } from '@/_mock/flights';
 import ModuleInfo from '@/components/cards/module-info';
 
 // Dynamically importing FlightSearch component with a loading skeleton
@@ -54,6 +53,8 @@ export default function FlightList({ ...props }) {
   const price = searchParams.get('price');
   const airlines = searchParams.get('airlines');
   const stops = searchParams.get('stop');
+  const provider = searchParams.get('provider') || 'skyscanner';
+  const runId = searchParams.get('runId') || null;
   const payload = {
     origin: slug[0].split('-')[1]?.toUpperCase(),
     destination: slug[1].split('-')[1]?.toUpperCase(),
@@ -64,6 +65,8 @@ export default function FlightList({ ...props }) {
     childrens: slug[6],
     departure_date: slug[7],
     currency: currentCurrency || 'USD',
+    provider,
+    runId,
   };
 
   if (slug[2] === 'round') {
@@ -74,6 +77,7 @@ export default function FlightList({ ...props }) {
   const [sort, setSort] = React.useState('down');
   const [isLoading, setLoading] = React.useState(true);
   const [data, setData] = React.useState([]);
+  const [error, setError] = React.useState(null);
 
   // const data = response?.data || [];
 
@@ -159,14 +163,147 @@ export default function FlightList({ ...props }) {
         .slice((page - 1) * itemsPerPage, page * itemsPerPage)
     : Array.from(new Array(3));
 
+  const normalizeCabinClass = (value) => {
+    if (typeof value === 'string') return value;
+    if (value?.class) return value.class;
+    if (value?.name) return value.name;
+    return payload.class || 'economy';
+  };
+
+  const normalizeBaggage = (baggage) => {
+    if (baggage == null) return null;
+    if (typeof baggage === 'string') return baggage;
+    if (typeof baggage === 'number') return `${baggage}KG`;
+    if (typeof baggage === 'object') {
+      const parts = [];
+      if (baggage.includedCheckedBags != null) {
+        parts.push(`${baggage.includedCheckedBags} checked`);
+      }
+      if (baggage.includedHandBags != null) {
+        parts.push(`${baggage.includedHandBags} hand`);
+      }
+      if (baggage.includedPersonalItem != null) {
+        parts.push(`${baggage.includedPersonalItem} personal`);
+      }
+      return parts.length ? parts.join(' + ') : JSON.stringify(baggage);
+    }
+    return String(baggage);
+  };
+
+  const createLegacyFlightGroup = React.useCallback(
+    (flight) => {
+      const departureDate = flight.departTime ? new Date(flight.departTime) : null;
+      const arrivalDate = flight.arriveTime
+        ? new Date(flight.arriveTime)
+        : departureDate && flight.durationMinutes
+        ? new Date(departureDate.getTime() + flight.durationMinutes * 60000)
+        : null;
+
+      const formatTime = (date) =>
+        date && !Number.isNaN(date.getTime())
+          ? date.toISOString().slice(11, 19)
+          : '00:00:00';
+      const formatDate = (date) =>
+        date && !Number.isNaN(date.getTime())
+          ? date.toISOString().slice(0, 10)
+          : '0000-00-00';
+      const duration =
+        flight.duration ||
+        `${Math.floor((flight.durationMinutes || 0) / 60)}h ${Math.round(
+          (flight.durationMinutes || 0) % 60
+        )}m`;
+      const bookingLinks = flight.links || {};
+
+      return [
+        [
+          {
+            id: flight.id || `${flight.origin}-${flight.departTime}`,
+            airline: flight.airline || flight.carrier || 'Unknown',
+            img: flight.airline || 'airline',
+            flight_no: flight.flightNumber || flight.flight_no || '',
+            class: normalizeCabinClass(flight.cabinClasses),
+            price: flight.bestPrice || flight.prices?.cached || 0,
+            currency: flight.currency || payload.currency || 'USD',
+            departure_code: flight.from?.airport || flight.origin || '',
+            arrival_code: flight.to?.airport || flight.destination || '',
+            departure_time: formatTime(departureDate),
+            departure_date: formatDate(departureDate),
+            arrival_time: formatTime(arrivalDate),
+            arrival_date: formatDate(arrivalDate),
+            departure_airport: flight.from?.airport || flight.origin || '',
+            arrival_airport: flight.to?.airport || flight.destination || '',
+            arrivalAirportName: flight.to?.airport || flight.destination || '',
+            duration_time: duration,
+            baggage: normalizeBaggage(flight.baggage),
+            refundable: Boolean(flight.refundable),
+            links: bookingLinks,
+            sourcesFound: flight.sourcesFound || [],
+            cheapestSource: flight.cheapestSource || null,
+          },
+        ],
+      ];
+    },
+    [payload.class, payload.currency]
+  );
+
   React.useEffect(() => {
-    setTimeout(() => {
-      setData(_flights(payload));
-      setLoading(false);
-      setRepeat((prev) => prev + 1);
-    }, 1000);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    const controller = new AbortController();
+    const fetchFlights = async () => {
+      setLoading(true);
+      setError(null);
+
+      try {
+        const response = await fetch('/api/skyscanner', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            origin: payload.origin,
+            destination: payload.destination,
+            departDate: payload.departure_date,
+            returnDate: payload.return_date,
+            currency: payload.currency,
+            tripType: slug[2],
+            cabinClass: payload.class,
+            provider: payload.provider,
+            runId: payload.runId,
+            adults: Number(payload.adults),
+            childrens: Number(payload.childrens),
+            infants: Number(payload.infants),
+          }),
+          signal: controller.signal,
+          cache: 'no-store',
+        });
+
+        if (!response.ok) {
+          const errorPayload = await response.json().catch(() => null);
+          throw new Error(errorPayload?.error || 'Failed to fetch flight results');
+        }
+
+        const { items } = await response.json();
+        const legacyFlights = Array.isArray(items)
+          ? items.map((item) => createLegacyFlightGroup(item))
+          : [];
+
+        setData(legacyFlights);
+      } catch (err) {
+        if (!controller.signal.aborted) {
+          setError(err.message || 'Skyscanner request failed');
+          setData([]);
+        }
+      } finally {
+        if (!controller.signal.aborted) {
+          setLoading(false);
+          setRepeat((prev) => prev + 1);
+        }
+      }
+    };
+
+    fetchFlights();
+
+    return () => controller.abort();
+  }, [payload.origin, payload.destination, payload.departure_date, payload.return_date, payload.currency, payload.class, payload.adults, payload.childrens, payload.infants, slug, createLegacyFlightGroup]);
 
   return (
     <Container maxWidth="xl">
@@ -211,6 +348,11 @@ export default function FlightList({ ...props }) {
                 isLoading={isLoading}
                 count={data?.length}
               />
+              {error ? (
+                <Box sx={{ p: 2, borderRadius: 2, bgcolor: 'error.lighter', color: 'error.main' }}>
+                  {error}
+                </Box>
+              ) : null}
               <Stack gap={2} mb={2} direction={{ sm: 'row', xs: 'column' }}>
                 {isLoading ? (
                   <>
