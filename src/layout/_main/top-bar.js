@@ -54,7 +54,7 @@ export default function TopBar({ currencies }) {
                 }}
               >
                 <FiPhoneCall size={14} />
-                info@reactflights.com
+                info@vliegtickets.ai
               </Typography>
               <Typography
                 component={Link}
