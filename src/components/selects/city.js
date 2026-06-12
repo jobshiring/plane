@@ -61,7 +61,7 @@ export default function HotelCitySelect({
       autoHighlight
       onChange={(_, value) => setSelectedCity(value)}
       value={selectedCity || null}
-      getOptionLabel={(option) => option.city}
+      getOptionLabel={(option) => (option?.city ? option.city : '')}
       loadingText="Loading cities..."
       noOptionsText="No city found!"
       popupIcon={<FaAngleDown fontSize={16} />}
@@ -74,14 +74,14 @@ export default function HotelCitySelect({
               fontSize="14px"
               textTransform="capitalize"
             >
-              {option.city.toLowerCase()}
+              {option?.city ? option.city.toLowerCase() : ''}
             </Typography>
             <Typography
               fontSize="12px"
               textTransform="capitalize"
               color="text.secondary"
             >
-              {option.country.toLowerCase()}
+              {option?.country ? option.country.toLowerCase() : ''}
             </Typography>
           </Stack>
         </Box>

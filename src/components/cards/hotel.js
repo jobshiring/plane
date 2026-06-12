@@ -85,7 +85,14 @@ export default function HotelCard({ hotel, isLoading, slug }) {
           <Skeleton variant="rectangular" width={1} height="100%" />
         ) : (
           <Image
-            src={require('public/images/hotels/' + hotel.image)}
+            src={(() => {
+              try {
+                return require('public/images/hotels/' + hotel.image);
+              } catch (e) {
+                // Fallback to public path if require fails
+                return '/images/hotels/' + hotel.image;
+              }
+            })()}
             alt={hotel.name}
             placeholder="blur"
             fill

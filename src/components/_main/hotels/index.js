@@ -19,12 +19,43 @@ const HotelSearch = dynamic(
     loading: () => <HotelSearchLongSkeleton isRoundTrip={false} />, // Displays a skeleton while loading
   }
 );
+// Normalize mock export to an array if necessary
+const hotelsSource = Array.isArray(hotelData) ? hotelData : (hotelData && hotelData.data) ? hotelData.data : [];
+
+// Fallback sample hotels to display when mocks and API return nothing
+const SAMPLE_HOTELS = [
+  {
+    id: 'sample-1',
+    name: 'Sample Grand Hotel',
+    location: 'Sample City',
+    price: 129,
+    stars: 4,
+    rating: 4.3,
+    hotelAmenities: ['Free WiFi', 'Breakfast included'],
+    roomAmenities: ['AC', 'TV'],
+    image: 'sample-1.jpg',
+  },
+  {
+    id: 'sample-2',
+    name: 'Cozy Sample Suites',
+    location: 'Sample City',
+    price: 89,
+    stars: 3,
+    rating: 3.9,
+    hotelAmenities: ['Free WiFi'],
+    roomAmenities: ['AC'],
+    image: 'sample-2.jpg',
+  },
+];
+
+const defaultHotels = hotelsSource && hotelsSource.length > 0 ? hotelsSource : SAMPLE_HOTELS;
+
 // Get unique amenities from all hotels
 const getUniqueAmenities = () => {
   const hotelAmenities = new Set();
   const roomAmenities = new Set();
 
-  hotelData.forEach((hotel) => {
+  defaultHotels.forEach((hotel) => {
     if (hotel.hotelAmenities) {
       hotel.hotelAmenities.forEach((amenity) => hotelAmenities.add(amenity));
     }
@@ -75,9 +106,73 @@ export default function HotelListing({ slug }) {
   };
 
   useEffect(() => {
-    setHotels(hotelData);
-    setFilteredHotels(hotelData);
-  }, []);
+    // Load hotels from API when `slug` (search params) is present,
+    // otherwise fall back to mock data.
+    async function loadHotels() {
+      if (slug && slug.length > 0) {
+        try {
+          setIsInitialized(false);
+          setFilteredHotels([]);
+
+          const [location, checkin, checkout, roomsPart, adults] = slug;
+          const rooms = roomsPart ? parseInt((roomsPart || '1').split('_')[0]) : 1;
+
+          const input = {
+            locationSlug: location,
+            checkinDate: checkin,
+            checkoutDate: checkout,
+            adults: Number(adults) || 1,
+            rooms: rooms || 1,
+            maxItems: 100,
+          };
+
+          const startRes = await fetch('/api/hotels', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(input),
+          });
+          const startJson = await startRes.json();
+
+          let items = startJson.items || [];
+
+          const runId = startJson.runId || (startJson.run && (startJson.run.data?.id || startJson.run.id));
+          if (runId && items.length === 0) {
+            // poll dataset until results appear or timeout
+            for (let i = 0; i < 8; i++) {
+              // wait 2s between polls
+              await new Promise((r) => setTimeout(r, 2000));
+              const ds = await fetch(`/api/hotels?runId=${runId}&maxItems=100`);
+              const dsJson = await ds.json();
+              if (dsJson.items && dsJson.items.length > 0) {
+                items = dsJson.items;
+                break;
+              }
+            }
+          }
+
+          if (items && items.length > 0) {
+            setHotels(items);
+            setFilteredHotels(items);
+          } else {
+            setHotels(defaultHotels);
+            setFilteredHotels(defaultHotels);
+          }
+        } catch (err) {
+          console.error('Hotel API error', err);
+          setHotels(defaultHotels);
+          setFilteredHotels(defaultHotels);
+        } finally {
+          setIsInitialized(true);
+        }
+      } else {
+        setHotels(defaultHotels);
+        setFilteredHotels(defaultHotels);
+        setIsInitialized(true);
+      }
+    }
+
+    loadHotels();
+  }, [slug]);
 
   // Initialize filters from URL params
   useEffect(() => {
@@ -93,7 +188,7 @@ export default function HotelListing({ slug }) {
     }
     const ratingCount = [0, 0, 0, 0, 0]; // index 0 => 5 stars, 4 => 1 star
 
-    hotelData.forEach((hotel) => {
+    defaultHotels.forEach((hotel) => {
       const stars = Number(hotel.stars); // Ensure it's a number
       if (stars >= 1 && stars <= 5) {
         const index = 5 - stars; // 5 stars go to index 0, etc.

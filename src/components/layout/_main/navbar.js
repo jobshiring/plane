@@ -27,6 +27,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import { IoHomeOutline } from 'react-icons/io5';
+import { BiHotel } from 'react-icons/bi';
 import { HiOutlineBuildingOffice } from 'react-icons/hi2';
 import { TfiHeadphoneAlt } from 'react-icons/tfi';
 import { IoSunnyOutline } from 'react-icons/io5';
@@ -62,6 +63,11 @@ const menu = [
     name: 'About',
     path: '/about',
     icon: <HiOutlineBuildingOffice />,
+  },
+  {
+    name: 'Hotels',
+    path: '/hotels',
+    icon: <BiHotel />,
   },
   {
     name: 'Contact',

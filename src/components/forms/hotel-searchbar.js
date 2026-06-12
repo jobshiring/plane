@@ -53,22 +53,32 @@ export default function HotelSearchForm({ params }) {
   };
 
   React.useEffect(() => {
-    setSelectedCity({
-      city: toTitleCase(
-        decodeURIComponent(params[0].split('-')[0]).split('_').join(' ')
-      ),
-      code: params[0].split('-')[1].toUpperCase(),
-    });
-    setStartDate(dayjs(params[1]));
+    // If params are not provided or malformed, keep defaults and load mock cities
+    if (!params || !Array.isArray(params) || params.length < 3) {
+      setTimeout(() => {
+        setLoading(false);
+        setData(_cities);
+      }, 500);
+      return;
+    }
 
-    setEndDate(dayjs(params[2]));
+    const rawLocation = params[0] || '';
+    const [rawCityPart = '', rawCode = ''] = rawLocation.split('-');
+
+    setSelectedCity({
+      city: toTitleCase(decodeURIComponent(rawCityPart).split('_').join(' ')),
+      code: (rawCode || 'LHR').toUpperCase(),
+    });
+
+    if (params[1]) setStartDate(dayjs(params[1]));
+    if (params[2]) setEndDate(dayjs(params[2]));
 
     setTimeout(() => {
       setLoading(false);
       setData(_cities);
     }, 1000);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [params]);
   // Function to convert traveler data object back to rooms state array
   const convertTravelerDataToRooms = (data) => {
     // Initialize rooms array based on the number of rooms
@@ -108,11 +118,18 @@ export default function HotelSearchForm({ params }) {
 
     return roomsArray;
   };
-  const oldTravelers = {
-    rooms: Number(params[3].split('_')[0]),
-    adults: params[4],
-    childrens: params[5]?.split('%2C').join(',') || '',
-  };
+  const oldTravelers = (() => {
+    try {
+      const roomsPart = params && params[3] ? params[3] : null;
+      const rooms = roomsPart ? Number((roomsPart || '1').split('_')[0]) : 1;
+      const adults = params && params[4] ? params[4] : '1';
+      const childrensRaw = params && params[5] ? params[5] : '';
+      const childrens = childrensRaw ? decodeURIComponent(childrensRaw).replace(/%2C/g, ',') : '';
+      return { rooms, adults, childrens };
+    } catch (e) {
+      return { rooms: 1, adults: '1', childrens: '' };
+    }
+  })();
   // Example of converting back to rooms array
   const reconstructedRooms = convertTravelerDataToRooms(oldTravelers);
 

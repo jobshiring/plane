@@ -1,4 +1,41 @@
 {
-    "data": [],
-    "count": 0
+  "data": [
+    {
+      "id": "mock-1",
+      "name": "Luxury Grand Plaza",
+      "location": "Downtown City",
+      "price": 189,
+      "stars": 5,
+      "rating": 4.8,
+      "slug": "luxury-grand-plaza",
+      "hotelAmenities": ["Free WiFi", "Breakfast included", "Swimming Pool", "Gym"],
+      "roomAmenities": ["AC", "TV", "Refrigerator"],
+      "image": "grand-plaza.jpg"
+    },
+    {
+      "id": "mock-2",
+      "name": "Comfort Inn & Suites",
+      "location": "Downtown City",
+      "price": 99,
+      "stars": 3,
+      "rating": 3.9,
+      "slug": "comfort-inn-suites",
+      "hotelAmenities": ["Free WiFi", "Parking"],
+      "roomAmenities": ["AC", "TV"],
+      "image": "comfort-inn.jpg"
+    },
+    {
+      "id": "mock-3",
+      "name": "Budget Express Hotel",
+      "location": "Downtown City",
+      "price": 59,
+      "stars": 2,
+      "rating": 3.5,
+      "slug": "budget-express",
+      "hotelAmenities": ["Free WiFi"],
+      "roomAmenities": ["AC"],
+      "image": "budget-express.jpg"
+    }
+  ],
+  "count": 3
 }

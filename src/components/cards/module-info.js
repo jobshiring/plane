@@ -53,11 +53,26 @@ export default function ModuleInfo({
               <Skeleton variant="text" width={140} />
             ) : (
               <>
-                {slug[0].split('-')[0].split('_').join(' ')}{' '}
+                {(() => {
+                  try {
+                    const loc0 = Array.isArray(slug) && slug[0] ? slug[0] : '';
+                    const city = loc0.split('-')[0].split('_').join(' ');
+                    return city;
+                  } catch (e) {
+                    return '';
+                  }
+                })()}{' '}
                 {!isHotel && (
                   <>
                     <BsAirplaneEngines />{' '}
-                    {slug[1].split('-')[0].split('_').join(' ')}
+                    {(() => {
+                      try {
+                        const loc1 = Array.isArray(slug) && slug[1] ? slug[1] : '';
+                        return loc1.split('-')[0].split('_').join(' ');
+                      } catch (e) {
+                        return '';
+                      }
+                    })()}
                   </>
                 )}
               </>
