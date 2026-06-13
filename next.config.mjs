@@ -11,11 +11,11 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'assets.duffel.com',
+        hostname: '**',
       },
       {
-        protocol: 'https',
-        hostname: 'res.cloudinary.com',
+        protocol: 'http',
+        hostname: '**',
       },
     ],
   },

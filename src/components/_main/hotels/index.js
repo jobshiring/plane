@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import dynamic from 'next/dynamic';
 import { Drawer, Container, Grid, Box, Pagination, Stack } from '@mui/material';
 import { useSearchParams, usePathname } from 'next/navigation';
@@ -105,47 +105,94 @@ export default function HotelListing({ slug }) {
     setOpen(newOpen);
   };
 
+  // Add ref to prevent multiple simultaneous fetch attempts for the same slug
+  const lastSlugRef = useRef(null);
+
   useEffect(() => {
+    // Only load if the slug actually changed
+    const currentSlugKey = slug ? slug.join('-') : null;
+    
+    if (currentSlugKey === lastSlugRef.current) return; // Skip if same slug
+    lastSlugRef.current = currentSlugKey;
+    
     // Load hotels from API when `slug` (search params) is present,
     // otherwise fall back to mock data.
     async function loadHotels() {
+      // Set default hotels immediately so user sees something fast!
+      setHotels(defaultHotels);
+      setFilteredHotels(defaultHotels);
+      setIsInitialized(true);
+
       if (slug && slug.length > 0) {
         try {
           setIsInitialized(false);
-          setFilteredHotels([]);
 
           const [location, checkin, checkout, roomsPart, adults] = slug;
           const rooms = roomsPart ? parseInt((roomsPart || '1').split('_')[0]) : 1;
 
-          const input = {
-            locationSlug: location,
-            checkinDate: checkin,
-            checkoutDate: checkout,
-            adults: Number(adults) || 1,
-            rooms: rooms || 1,
-            maxItems: 100,
-          };
-
-          const startRes = await fetch('/api/hotels', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(input),
-          });
-          const startJson = await startRes.json();
-
-          let items = startJson.items || [];
-
-          const runId = startJson.runId || (startJson.run && (startJson.run.data?.id || startJson.run.id));
-          if (runId && items.length === 0) {
-            // poll dataset until results appear or timeout
-            for (let i = 0; i < 8; i++) {
-              // wait 2s between polls
-              await new Promise((r) => setTimeout(r, 2000));
-              const ds = await fetch(`/api/hotels?runId=${runId}&maxItems=100`);
+          // First try the existing run ID the user provided
+          const existingRunId = '928VJ9VfxaBU2zFoh';
+          let items = [];
+          
+          try {
+            console.log('Trying existing run ID:', existingRunId);
+            const ds = await fetch(`/api/hotels?runId=${existingRunId}&maxItems=100`);
+            if (ds.ok) {
               const dsJson = await ds.json();
               if (dsJson.items && dsJson.items.length > 0) {
                 items = dsJson.items;
-                break;
+                console.log('Got items from existing run:', items.length);
+              }
+            }
+          } catch (existingErr) {
+            console.warn('Existing run ID failed, trying to start new run:', existingErr);
+          }
+
+          // If existing run didn't work, try to start a new one (but with shorter wait)
+          if (items.length === 0) {
+            const input = {
+              locationSlug: location,
+              checkinDate: checkin,
+              checkoutDate: checkout,
+              adults: Number(adults) || 1,
+              rooms: rooms || 1,
+              maxItems: 100,
+            };
+
+            const startRes = await fetch('/api/hotels', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(input),
+            });
+            const startJson = await startRes.json();
+
+            items = startJson.items || [];
+
+            const runId = startJson.runId || (startJson.run && (startJson.run.data?.id || startJson.run.id));
+            if (runId && items.length === 0) {
+              // Poll, but only 3 times (max 9s total)
+              let pollCount = 0;
+              const maxPolls = 3;
+              while (pollCount < maxPolls) {
+                pollCount++;
+                // wait 3s between polls
+                await new Promise((r) => setTimeout(r, 3000));
+                // Check if we should still be polling this run (slug didn't change)
+                const currentSlugKeyNow = slug ? slug.join('-') : null;
+                if (currentSlugKeyNow !== currentSlugKey) {
+                  console.log('Slug changed, stopping poll');
+                  break;
+                }
+                try {
+                  const ds = await fetch(`/api/hotels?runId=${runId}&maxItems=100`);
+                  const dsJson = await ds.json();
+                  if (dsJson.items && dsJson.items.length > 0) {
+                    items = dsJson.items;
+                    break;
+                  }
+                } catch (pollErr) {
+                  console.warn('Poll attempt failed', pollErr);
+                }
               }
             }
           }
@@ -153,22 +200,13 @@ export default function HotelListing({ slug }) {
           if (items && items.length > 0) {
             setHotels(items);
             setFilteredHotels(items);
-          } else {
-            setHotels(defaultHotels);
-            setFilteredHotels(defaultHotels);
-          }
+          } 
         } catch (err) {
           console.error('Hotel API error', err);
-          setHotels(defaultHotels);
-          setFilteredHotels(defaultHotels);
         } finally {
           setIsInitialized(true);
         }
-      } else {
-        setHotels(defaultHotels);
-        setFilteredHotels(defaultHotels);
-        setIsInitialized(true);
-      }
+      } 
     }
 
     loadHotels();

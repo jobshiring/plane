@@ -10,7 +10,10 @@
       "slug": "luxury-grand-plaza",
       "hotelAmenities": ["Free WiFi", "Breakfast included", "Swimming Pool", "Gym"],
       "roomAmenities": ["AC", "TV", "Refrigerator"],
-      "image": "grand-plaza.jpg"
+      "image": "hotel_1.jpg",
+      "viewing": 15,
+      "ratingText": "Excellent",
+      "reviews": 245
     },
     {
       "id": "mock-2",
@@ -22,7 +25,10 @@
       "slug": "comfort-inn-suites",
       "hotelAmenities": ["Free WiFi", "Parking"],
       "roomAmenities": ["AC", "TV"],
-      "image": "comfort-inn.jpg"
+      "image": "hotel_2.jpg",
+      "viewing": 8,
+      "ratingText": "Good",
+      "reviews": 120
     },
     {
       "id": "mock-3",
@@ -34,8 +40,41 @@
       "slug": "budget-express",
       "hotelAmenities": ["Free WiFi"],
       "roomAmenities": ["AC"],
-      "image": "budget-express.jpg"
+      "image": "hotel_3.jpg",
+      "viewing": 5,
+      "ratingText": "Fair",
+      "reviews": 75
+    },
+    {
+      "id": "mock-4",
+      "name": "Sunset Resort & Spa",
+      "location": "Beachfront",
+      "price": 250,
+      "stars": 5,
+      "rating": 4.9,
+      "slug": "sunset-resort-spa",
+      "hotelAmenities": ["Free WiFi", "Swimming Pool", "Spa", "Gym", "Restaurant"],
+      "roomAmenities": ["AC", "TV", "Mini Bar", "Ocean View"],
+      "image": "hotel_4.jpg",
+      "viewing": 22,
+      "ratingText": "Exceptional",
+      "reviews": 412
+    },
+    {
+      "id": "mock-5",
+      "name": "Mountain View Lodge",
+      "location": "Mountain Area",
+      "price": 120,
+      "stars": 4,
+      "rating": 4.3,
+      "slug": "mountain-view-lodge",
+      "hotelAmenities": ["Free WiFi", "Parking", "Hiking Trails", "Restaurant"],
+      "roomAmenities": ["AC", "TV", "Fireplace"],
+      "image": "hotel_5.jpg",
+      "viewing": 12,
+      "ratingText": "Very Good",
+      "reviews": 188
     }
   ],
-  "count": 3
+  "count": 5
 }

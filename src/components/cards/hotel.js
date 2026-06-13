@@ -86,19 +86,23 @@ export default function HotelCard({ hotel, isLoading, slug }) {
         ) : (
           <Image
             src={(() => {
+              // If it's already a full URL, use it directly
+              if (hotel.image.startsWith('http://') || hotel.image.startsWith('https://')) {
+                return hotel.image;
+              }
               try {
                 return require('public/images/hotels/' + hotel.image);
               } catch (e) {
-                // Fallback to public path if require fails
-                return '/images/hotels/' + hotel.image;
+                // Fallback to a default hotel image if require fails
+                return require('public/images/hotels/hotel_1.jpg');
               }
             })()}
             alt={hotel.name}
-            placeholder="blur"
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             style={{ objectFit: 'cover' }}
             priority
+            unoptimized={hotel.image.startsWith('http://') || hotel.image.startsWith('https://')}
           />
         )}
       </Box>
