@@ -11,11 +11,11 @@ import staticData from 'src/static/data.json';
 // SEO metadata
 export async function generateMetadata() {
   return {
-    metadataBase: new URL('https://reactflights.com'),
-    title: 'React Flights Booking Software',
+    metadataBase: new URL('https://vliegtickets.ai'),
+    title: 'Vliegtickets en hotels vergelijken',
     description:
-      'React Flights offers a flight booking platform designed for flight agencies to enhance their services.',
-    tags: ['React Flights', 'React Travel', 'React', 'Travels', 'Travel'],
+      'Vind de beste prijzen van vliegtickets en hotels van verschillende aanbieders.',
+    tags: ['Vliegtickets', 'Hotels', 'Vergelijken'],
     icons: { icon: '/favicon.ico' },
   };
 }

@@ -7,32 +7,32 @@ const TermsAndConditions = () => {
   return (
     <Container sx={{ my: 8 }}>
       <Typography variant="h2" component="h1" mb={3} gutterBottom>
-        ReactFlights Terms and Conditions
+        Vliegtickets AI Terms and Conditions
       </Typography>
       <Typography variant="subtitle1" color="text.secondary" mb={5} paragraph>
         Please read these terms and conditions carefully before using the
-        ReactFlights platform.
+        Vliegtickets AI platform.
       </Typography>
       <Typography variant="h6" component="h2" gutterBottom>
-        Welcome to ReactFlights!
+        Welcome to Vliegtickets AI!
       </Typography>
       <Typography variant="body1" paragraph>
         These terms and conditions outline the rules and regulations for the use
-        of ReactFlights&apos; services.
+        of Vliegtickets AI services.
       </Typography>
       <Typography variant="body1" paragraph>
         By accessing our platform, we assume you accept these terms and
-        conditions. Do not continue to use ReactFlights if you do not agree to
+        conditions. Do not continue to use Vliegtickets AI if you do not agree to
         all the terms and conditions stated on this page.
       </Typography>
       <Typography variant="h6" component="h2" gutterBottom>
         License
       </Typography>
       <Typography variant="body1" paragraph>
-        Unless otherwise stated, ReactFlights and/or its licensors own the
+        Unless otherwise stated, Vliegtickets AI and/or its licensors own the
         intellectual property rights for all material on the platform. All
         intellectual property rights are reserved. You may access this from
-        ReactFlights for your own personal use, subject to the restrictions set
+        Vliegtickets AI for your own personal use, subject to the restrictions set
         in these terms and conditions.
       </Typography>
       <Typography variant="h6" component="h2" gutterBottom>
@@ -40,10 +40,10 @@ const TermsAndConditions = () => {
       </Typography>
       <Typography variant="body1" paragraph>
         Certain parts of this platform offer the opportunity for users to post
-        and exchange opinions and information. ReactFlights does not filter,
+        and exchange opinions and information. Vliegtickets AI does not filter,
         edit, publish, or review Comments prior to their presence on the
         platform. Comments do not reflect the views and opinions of
-        ReactFlights, its agents, and/or affiliates.
+        Vliegtickets AI, its agents, and/or affiliates.
       </Typography>
       <Typography variant="h6" component="h2" gutterBottom>
         Hyperlinking to our Content

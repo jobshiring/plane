@@ -5,9 +5,9 @@ import ReviewsListComponent from '@/components/_admin/reviews';
 
 // Meta information
 export const metadata = {
-  title: 'Reviews - ReactFlights',
-  applicationName: 'ReactFlights',
-  authors: 'ReactFlights',
+  title: 'Reviews - Vliegtickets AI',
+  applicationName: 'VliegticketsAI',
+  authors: 'Vliegtickets AI',
 };
 export default async function page() {
   return (

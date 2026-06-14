@@ -10,8 +10,7 @@ export default function AboutUs() {
           Our Journey to Elevate Flight Booking
         </Typography>
         <Typography variant="subtitle1" color="text.secondary" pb={5}>
-          At Reactflights, we’re passionate about making flight booking more
-          efficient, intuitive, and accessible for businesses and travelers
+          At Vliegtickets AI, zorgen wij met zorgvuldigheid and aandacht voor zakelijke klanten and reizigers
           alike. Our story is one of innovation, dedication, and a commitment to
           excellence.
         </Typography>

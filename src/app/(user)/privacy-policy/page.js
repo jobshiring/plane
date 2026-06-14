@@ -17,8 +17,8 @@ export default function page() {
         mb={5}
         color='text.secondary'
         paragraph>
-        Your privacy is important to us. This policy outlines how ReactFlights
-        collects, uses, and protects your information.
+        Jouw privacy is belangerijk voor ons. Dit beleid beschrijft hoe Vliegtickets AI
+        informatie beheert.
       </Typography>
       <Typography
         variant='h6'
